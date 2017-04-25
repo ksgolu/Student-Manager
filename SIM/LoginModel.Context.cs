@@ -13,10 +13,10 @@ namespace SIM
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LoginEntities : DbContext
+    public partial class LoginTabelEntities : DbContext
     {
-        public LoginEntities()
-            : base("name=LoginEntities")
+        public LoginTabelEntities()
+            : base("name=LoginTabelEntities")
         {
         }
     

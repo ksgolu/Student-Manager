@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SIM
 {
 
     public partial class UserControlAdmin : UserControl
     {
+        //LoginTabelEntities loginTabelEntities;
+        //LoginTabel loginTabel;
+        
         int buttonNo = 0;
         public UserControlAdmin()
         {
@@ -160,6 +164,18 @@ namespace SIM
             else
             {
                 panelAddUser.Visible = true;
+                try
+                {
+                    //loginTabelEntities = 
+                    /*LoginTabel lt = new LoginTabel();
+                    loginTabelEntities.LoginTabels.Add(lt);
+                    loginTabelBindingSource.Add(lt);
+                    loginTabelBindingSource.MoveLast();*/
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                 //panel1.Enabled = false;
             }
             panel8.Visible = false;
@@ -267,6 +283,59 @@ namespace SIM
             Properties.Settings.Default.Save();
             panelAddUser.Visible = false;
             panel8.Visible = false;
+
+
+            string source = "data source = KUMARSATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
+            //String query= "select * from  where UserId='" + txtUserid.Text + "' and Password='" + txtPassword.Text + "'"
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(source))
+                {
+                    string NotActive = "NotActive";
+                    SqlCommand cmd = new SqlCommand(" insert into LoginTabel(UserId,Name,Email,Password,Status) values('" +this.txtEmployeeId.Text + "','"+this.txtName.Text+"','"+this.txtEmail.Text+"','"+this.txtRe_Password.Text+"','"+NotActive+"')", conn);
+                    SqlDataReader dr;
+                    conn.Open();
+                    dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+            /* try
+             {
+
+                 LoginTabelEntities loginTabelEntities = new LoginTabelEntities();
+                 loginTabelBindingSource.DataSource = loginTabelEntities.LoginTabels.ToList();
+                 txtEmployeeId.Focus();
+
+                     LoginTabel lt = new LoginTabel();
+                    loginTabelEntities.LoginTabels.Add(lt);
+                    loginTabelBindingSource.Add(lt);
+                    loginTabelBindingSource.MoveLast();
+
+                 loginTabelBindingSource.EndEdit();
+                 loginTabelEntities.SaveChangesAsync();
+
+
+             }
+             catch(Exception ex)
+             {
+                 MessageBox.Show(ex.Message);
+             }*/
         }
 
 
@@ -525,10 +594,10 @@ namespace SIM
         /*_______________________________________________________________________________________________________________________________________________*/
 
 
-       
 
 
-       
+
+
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
@@ -571,6 +640,7 @@ namespace SIM
                 case 1:
                     {
                         Properties.Settings.Default.btn1 = "";
+                        btnUser1.Text = "";
                         btnUser1.Visible = false;
                         btnView1.Visible = false;
                         break;
@@ -578,6 +648,7 @@ namespace SIM
                 case 2:
                     {
                         Properties.Settings.Default.btn2 = "";
+                        btnUser2.Text = "";
                         btnUser2.Visible = false;
                         btnView2.Visible = false;
                         break;
@@ -585,6 +656,7 @@ namespace SIM
                 case 3:
                     {
                         Properties.Settings.Default.btn3 = "";
+                        btnUser3.Text = "";
                         btnUser3.Visible = false;
                         btnView3.Visible = false;
                         break;
@@ -593,6 +665,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn4 = "";
+                        btnUser4.Text = "";
                         btnUser4.Visible = false;
                         btnView4.Visible = false;
                         break;
@@ -601,6 +674,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn5 = "";
+                        btnUser5.Text = "";
                         btnUser5.Visible = false;
                         btnView5.Visible = false;
                         break;
@@ -609,6 +683,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn6 = "";
+                        btnUser6.Text = "";
                         btnUser6.Visible = false;
                         btnView6.Visible = false;
                         break;
@@ -617,6 +692,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn7 = "";
+                        btnUser7.Text = "";
                         btnUser7.Visible = false;
                         btnView7.Visible = false;
                         break;
@@ -625,6 +701,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn8 = "";
+                        btnUser8.Text = "";
                         btnUser8.Visible = false;
                         btnView8.Visible = false;
                         break;
@@ -633,6 +710,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn9 = "";
+                        btnUser9.Text = "";
                         btnUser9.Visible = false;
                         btnView9.Visible = false;
                         break;
@@ -641,6 +719,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn10 = "";
+                        btnUser10.Text = "";
                         btnUser10.Visible = false;
                         btnView10.Visible = false;
                         break;
@@ -649,6 +728,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn11 = "";
+                        btnUser11.Text = "";
                         btnUser11.Visible = false;
                         btnView11.Visible = false;
                         break;
@@ -657,6 +737,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn12 = "";
+                        btnUser12.Text = "";
                         btnUser12.Visible = false;
                         btnView12.Visible = false;
                         break;
@@ -665,6 +746,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn13 = "";
+                        btnUser13.Text = "";
                         btnUser13.Visible = false;
                         btnView13.Visible = false;
                         break;
@@ -673,6 +755,7 @@ namespace SIM
                     {
 
                         Properties.Settings.Default.btn14 = "";
+                        btnUser14.Text = "";
                         btnUser14.Visible = false;
                         btnView14.Visible = false;
                         break;
@@ -706,6 +789,69 @@ namespace SIM
             pnlDetails.Visible = false;
         }
 
+        private void txtEmployeeId_TextChanged(object sender, EventArgs e)
+        {
+            SearchTabel(txtEmployeeId.Text);
+        }
 
+        public void SearchTabel(string UserId)
+        {
+            string source = "data source = KUMARSATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
+            //String query= "select * from  where UserId='" + txtUserid.Text + "' and Password='" + txtPassword.Text + "'"
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(source))
+                {
+                    SqlCommand cmd = new SqlCommand(" select * from Faculty where Id= '" + UserId + "' ", conn);
+                    SqlDataReader dr;
+                    conn.Open();
+                    dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        string name = dr.GetString(1);
+                        string Email = dr.GetString(6);
+                        txtName.Text = name;
+                        txtEmail.Text = Email;
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnStudent_Click(object sender, EventArgs e)
+        {
+
+            string source = "data source = KUMARSATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
+            //String query= "select * from  where UserId='" + txtUserid.Text + "' and Password='" + txtPassword.Text + "'"
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(source))
+                {
+                    SqlCommand cmd = new SqlCommand(" select * from Faculty", conn);
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = cmd;
+                    DataTable dtabel = new DataTable();
+                    sda.Fill(dtabel);
+                    BindingSource bSource = new BindingSource();
+                    bSource.DataSource = dtabel;
+                    dataGridView1.DataSource = bSource;
+                    sda.Update(dtabel);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
-}  
+}
+ 

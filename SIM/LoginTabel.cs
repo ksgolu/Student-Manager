@@ -14,12 +14,12 @@ namespace SIM
     
     public partial class LoginTabel
     {
-        public string UserId { get; set; }
+        public string userId { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
-        public byte[] LoginPhoto { get; set; }
-        public string securityQuestion { get; set; }
-        public string securityAnswer { get; set; }
-        public Nullable<System.DateTime> loginTime { get; set; }
+        public string SecurityAnswer { get; set; }
+        public Nullable<System.DateTime> LoginTime { get; set; }
+        public string Status { get; set; }
     }
 }

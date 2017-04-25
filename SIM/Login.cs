@@ -65,12 +65,30 @@ namespace SIM
                     }
                     if (count == 1 && check==0 && available==false)
                     {
+                        conn.Close();
                         pictureBox2.Visible = false;
                         pictureBox1.Visible = true;
                         this.Hide();
-             
-                        Form1 form = new Form1(txtUserid.Text);
-                        form.Show();
+
+                        string notActive = "NotActive";
+                        SqlCommand cd = new SqlCommand("select * from logintabel where UserId='" + txtUserid.Text + "' and Password='" + txtPassword.Text + "' and Status='"+notActive+"'", conn);
+                        //string=""
+                        SqlDataReader dataread;
+                        conn.Open();
+                        dataread = cd.ExecuteReader();
+                        int count1 = 0;
+                        while (dataread.Read())
+                        { count1++; }
+                        if (count1 == 1)
+                        {
+                            MessageBox.Show("Your Account is not active yet!");
+                        }
+                        else
+                        {
+
+                            Form1 form = new Form1(txtUserid.Text);
+                            form.Show();
+                        }
 
                         //this.Show();
                     }
