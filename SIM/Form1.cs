@@ -33,35 +33,49 @@ namespace SIM
         //string source = "data source = SATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
         int delete = 0, update = 0, added = 0, check = 0; //this golbel variable is counter for update,delete and add button. and these are reset to ( 0 ) when ok button of panelStatus is pressed
 
-        
+        bool ActiveStatus,Admin;
+        string userId, Password;
         //geuStudentEntities studentEntities;
-
-        public Form1(string username)
+        StudentEntities studentEntities;
+        public Form1(string userid,string Password ,bool ActiveStatus,bool Admin)
         {
-            //Thread t = new Thread(new ThreadStart(Splash));
-            //t.Start();
+            this.ActiveStatus = ActiveStatus;
+            userId = userid;
+            this.Password = Password;
+            this.Admin = Admin;
             InitializeComponent();
-            /*SqlConnection conn = new SqlConnection(source);
-            SqlCommand cmd = new SqlCommand("select * from logintabel where UserId='" + username + "' and Password='" + txtPassword.Text + "'", conn);*/
 
-            /*---------------splash creen------------------------*/
-            /*string str = string.Empty;
-            for(int i=0;i<100000;i++)
+            string source = "data source = KUMARSATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
+           
+
+            try
             {
-                str += i.ToString();
-            }*/
-            /*--------------------------------------------------*/
-            // t.Abort();
-            string source = "data source = SATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
+                using (SqlConnection conn = new SqlConnection(source))
+                {
+                    SqlCommand cmd = new SqlCommand(" select * from LoginTabel where UserId= '" + userid + "' ", conn);
+                    SqlDataReader dr;
+                    conn.Open();
+                    dr = cmd.ExecuteReader();
 
+                    while (dr.Read())
+                    {
+                        string name = dr.GetString(3);
+                        labelProfile.Text = name;
 
-            using (SqlConnection conn = new SqlConnection(source))
-            {
-                SqlCommand cmd = new SqlCommand("select * from logintabel where Name='" + username + /*"' and Password='" + txtPassword.Text + */"'", conn);
-                //string=""
+                    }
+
+                }
 
             }
-            labelProfile.Text = username;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erroe while retiving name from datbase\n\n"+ex.Message);
+            }
+
+
+
+           
+
             /* Login form = new Login();
              form.Show();*/
             /*  //geuEntities test;
@@ -81,14 +95,14 @@ namespace SIM
         }
 
 
-        void Splash()
+        /*void Splash()
         {
             SplashScreen.SplashForm frm = new SplashScreen.SplashForm();
             frm.AppName = "Logout";
             //frm.Text = "Wait Logout";
 
             Application.Run(frm);
-        }
+        }*/
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -116,6 +130,18 @@ namespace SIM
             //this.studentTableAdapter.Fill(this.goluDataSet.student);
 
             */
+
+            if (ActiveStatus)
+            {
+                FormUserVerification frm = new FormUserVerification(userId, Password);
+                frm.ShowDialog();
+            }
+            if (Admin)
+            
+                btnAmin.Visible = true;
+            
+            else
+                btnAmin.Visible = false;
 
         }
 
@@ -249,10 +275,11 @@ namespace SIM
                 panelStudent.Visible = true;        /*this block of code will only enable and visible the student panel other two panel will disable*/
                /* UserControlFaculty.Visible = false;
                 UserControlStaff .Visible = false;*/
+                userControlAdmin1.Visible=false;
                 panelSearch.Visible = true;
-               
-                /*studentEntities = new geuStudentEntities();
-                geuStudentBindingSource.DataSource = studentEntities.geuStudents.ToList();*/
+
+                studentEntities = new StudentEntities();
+                studentBindingSource.DataSource = studentEntities.Students.ToList();
                 dataGridView1.Enabled = true;
                 labelDBstatus.Text = "Database is currently active";
                 
@@ -306,10 +333,10 @@ namespace SIM
                 btnAdd.Visible = true;
                 btnAddStudentExtand.Visible = true;
                 txtEnrollNo.Focus();
-               /* geuStudent g = new geuStudent();
-                 studentEntities.geuStudents.Add(g);
-                 geuStudentBindingSource.Add(g);
-                 geuStudentBindingSource.MoveLast();*/
+                    Student g = new Student();
+                 studentEntities.Students.Add(g);
+                 studentBindingSource.Add(g);
+                 studentBindingSource.MoveLast();
                 labelDOB.Visible = true;
 
                 /* these setting are used because after pressing edit button (situated at the bottom of the dataGridView1) all below text box become disabled.
@@ -345,8 +372,8 @@ namespace SIM
             {
                 try
                 {
-                    /*geuStudentBindingSource.EndEdit();                   
-                    studentEntities.SaveChangesAsync();*/
+                    studentBindingSource.EndEdit();                   
+                    studentEntities.SaveChangesAsync();
                     added++;
                     txtCounterAdd.Text = added.ToString();
                     ///panelStatus.Enabled = true;
@@ -359,10 +386,10 @@ namespace SIM
 
 
                      txtEnrollNo.Focus();
-                    /* geuStudent g = new geuStudent();
-                     studentEntities.geuStudents.Add(g);
-                     geuStudentBindingSource.Add(g);
-                     geuStudentBindingSource.MoveLast();*/
+                     Student g = new Student();
+                     studentEntities.Students.Add(g);
+                     studentBindingSource.Add(g);
+                     studentBindingSource.MoveLast();
                      
 
 
@@ -387,8 +414,8 @@ namespace SIM
             try
             {
                 int check = 0;
-               /* geuStudentBindingSource.EndEdit();
-                studentEntities.SaveChanges();*/
+               studentBindingSource.EndEdit();
+                studentEntities.SaveChangesAsync();
                 panelStatus.Enabled = true;
                 panelStatus.Visible = true;
                 labelUpdate.Visible = true;
@@ -408,14 +435,14 @@ namespace SIM
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Update error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               /* geuStudentBindingSource.ResetBindings(false);*/
+                studentBindingSource.ResetBindings(false);
             }
         }
 
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-           /* geuStudentBindingSource.ResetBindings(false);
+            studentBindingSource.ResetBindings(false);
              foreach (DbEntityEntry entry in studentEntities.ChangeTracker.Entries())
              {
                  switch (entry.State)
@@ -437,7 +464,7 @@ namespace SIM
                          }
                  }
 
-             }*/
+             }
              panelStudentAdd.Enabled = false;
              panelStudentAdd.Visible = false;
              dataGridView1.Enabled = true;
@@ -503,20 +530,20 @@ namespace SIM
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-           /* if (e.KeyChar == (char)13)
+            if (e.KeyChar == (char)13)
             {
                 if (string.IsNullOrEmpty(txtSearch.Text))
                 {
-                    dataGridView1.DataSource = geuStudentBindingSource;
+                    dataGridView1.DataSource = studentBindingSource;
                 }
                 else
                 {
-                    var query = from o in geuStudentBindingSource.DataSource as List<geuStudent>
+                    var query = from o in studentBindingSource.DataSource as List<Student>
                                 where o.EnrollNo == txtSearch.Text || o.Name.Contains(txtSearch.Text)
                                 select o;
                     dataGridView1.DataSource = query.ToList();
                 }
-            }*/
+            }
         }
 
 
@@ -538,7 +565,7 @@ namespace SIM
                     btnUpdate.Visible = true;
                     btnAdd.Enabled = false;
                     btnAdd.Visible = false;
-                    //studentEntities.geuStudents.Find(geuStudentBindingSource.Current as geuStudent);
+                    studentEntities.Students.Find(studentBindingSource.Current as Student);
                     txtEnrollNo.Focus();
                 }
                 catch(Exception ex)
@@ -561,11 +588,11 @@ namespace SIM
             {
                 if (MessageBox.Show("Are you sure to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                   /* try
+                    try
                     {
-                        studentEntities.geuStudents.Remove(geuStudentBindingSource.Current as geuStudent);
-                         geuStudentBindingSource.RemoveCurrent();
-                         geuStudentBindingSource.EndEdit();
+                        studentEntities.Students.Remove(studentBindingSource.Current as Student);
+                         studentBindingSource.RemoveCurrent();
+                         studentBindingSource.EndEdit();
                          studentEntities.SaveChanges();
                         panelStatus.Enabled = true;
                         panelStatus.Visible = true;
@@ -578,8 +605,8 @@ namespace SIM
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message, "Could not inserted into batabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                         geuStudentBindingSource.ResetBindings(false);
-                    }*/
+                         studentBindingSource.ResetBindings(false);
+                    }
                 }
             }
             else
@@ -598,11 +625,11 @@ namespace SIM
                 {
                     if (MessageBox.Show("Are you sure to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                         /*try
+                         try
                          {
-                             studentEntities.geuStudents.Remove(geuStudentBindingSource.Current as geuStudent);
-                             geuStudentBindingSource.RemoveCurrent();
-                             geuStudentBindingSource.EndEdit();
+                             studentEntities.Students.Remove(studentBindingSource.Current as Student);
+                             studentBindingSource.RemoveCurrent();
+                             studentBindingSource.EndEdit();
                              studentEntities.SaveChanges();
 
 
@@ -615,8 +642,8 @@ namespace SIM
                          catch (Exception ex)
                          {
                              MessageBox.Show(ex.Message, "Could not inserted into batabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                             geuStudentBindingSource.ResetBindings(false);
-                         }*/
+                             studentBindingSource.ResetBindings(false);
+                         }
                     }
                 }
             }
@@ -659,13 +686,13 @@ namespace SIM
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-           /* try
+            try
             {
                 btnAddStudentExtand.Visible = false;
                 panelStudent.Visible = false;
                 panelStudent.Visible = true;
-                //geuStudents = new geuStudentEntities();
-                geuStudentBindingSource.DataSource = studentEntities.geuStudents.ToList();
+                //Students = new StudentEntities();
+                studentBindingSource.DataSource = studentEntities.Students.ToList();
                 panelStudentAdd.Visible = false;
                 dataGridView1.Enabled = true;
                 labelDBstatus.Text = "Database is currently active";
@@ -675,7 +702,7 @@ namespace SIM
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "mesage");
-            }*/
+            }
         }
 
 
@@ -911,8 +938,9 @@ namespace SIM
 
         private void btnAmin_Click(object sender, EventArgs e)
         {
-            SIM_Admin frm = new SIM_Admin();
-            frm.ShowDialog();
+            userControlAdmin1.Visible = true;
+            panelStudent.Visible = false;
+            
 
 
         }

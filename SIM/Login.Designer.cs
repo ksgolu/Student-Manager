@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelMain = new System.Windows.Forms.Panel();
+            this.labelMessage = new System.Windows.Forms.Label();
+            this.chkBx_Remember = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@
             this.btnGroupBoxCancel = new System.Windows.Forms.Button();
             this.txtGropBoxId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.chkBx_Remember = new System.Windows.Forms.CheckBox();
-            this.labelMessage = new System.Windows.Forms.Label();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +86,28 @@
             this.panelMain.Size = new System.Drawing.Size(268, 347);
             this.panelMain.TabIndex = 0;
             // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessage.ForeColor = System.Drawing.Color.Crimson;
+            this.labelMessage.Location = new System.Drawing.Point(80, 112);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(118, 15);
+            this.labelMessage.TabIndex = 12;
+            this.labelMessage.Text = "Happy   to   see   you";
+            // 
+            // chkBx_Remember
+            // 
+            this.chkBx_Remember.AutoSize = true;
+            this.chkBx_Remember.Location = new System.Drawing.Point(101, 300);
+            this.chkBx_Remember.Name = "chkBx_Remember";
+            this.chkBx_Remember.Size = new System.Drawing.Size(94, 17);
+            this.chkBx_Remember.TabIndex = 11;
+            this.chkBx_Remember.Text = "Remember me";
+            this.chkBx_Remember.UseVisualStyleBackColor = true;
+            this.chkBx_Remember.CheckedChanged += new System.EventHandler(this.chkBx_Remember_CheckedChanged);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -114,7 +136,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnLogin.Location = new System.Drawing.Point(46, 266);
+            this.btnLogin.Location = new System.Drawing.Point(46, 267);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(194, 27);
             this.btnLogin.TabIndex = 3;
@@ -365,28 +387,6 @@
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "User-id";
-            // 
-            // chkBx_Remember
-            // 
-            this.chkBx_Remember.AutoSize = true;
-            this.chkBx_Remember.Location = new System.Drawing.Point(101, 300);
-            this.chkBx_Remember.Name = "chkBx_Remember";
-            this.chkBx_Remember.Size = new System.Drawing.Size(94, 17);
-            this.chkBx_Remember.TabIndex = 11;
-            this.chkBx_Remember.Text = "Remember me";
-            this.chkBx_Remember.UseVisualStyleBackColor = true;
-            this.chkBx_Remember.CheckedChanged += new System.EventHandler(this.chkBx_Remember_CheckedChanged);
-            // 
-            // labelMessage
-            // 
-            this.labelMessage.AutoSize = true;
-            this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessage.ForeColor = System.Drawing.Color.Crimson;
-            this.labelMessage.Location = new System.Drawing.Point(80, 112);
-            this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(118, 15);
-            this.labelMessage.TabIndex = 12;
-            this.labelMessage.Text = "Happy   to   see   you";
             // 
             // Login
             // 

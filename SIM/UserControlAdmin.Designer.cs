@@ -39,7 +39,6 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panelAddUser = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.loginTabelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtName = new System.Windows.Forms.TextBox();
             this.btn_PnlAddUser_Cancel = new System.Windows.Forms.Button();
             this.btn_PnlAddUser_Add = new System.Windows.Forms.Button();
@@ -48,22 +47,19 @@
             this.txtEmployeeId = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.pnlDetails = new System.Windows.Forms.Panel();
-            this.linkRecoverPassword = new System.Windows.Forms.LinkLabel();
             this.label19 = new System.Windows.Forms.Label();
             this.pnlDetails_RemoveUser = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label151 = new System.Windows.Forms.Label();
             this.label153 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelMotherName = new System.Windows.Forms.Label();
             this.labelFatherName = new System.Windows.Forms.Label();
             this.labelDateOfBirth = new System.Windows.Forms.Label();
             this.labelCourse = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label83 = new System.Windows.Forms.Label();
             this.btnHide_PnlDetails = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewStudent = new System.Windows.Forms.DataGridView();
             this.pnlHoldingUserButton = new System.Windows.Forms.Panel();
             this.btnUser14 = new System.Windows.Forms.Button();
             this.btnUser9 = new System.Windows.Forms.Button();
@@ -109,33 +105,70 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginTabelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrollNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rollNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aadhaarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.securityAnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entryByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entryDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastUpdateByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updateDateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewStaff = new System.Windows.Forms.DataGridView();
+            this.dataGridViewFaculty = new System.Windows.Forms.DataGridView();
+            this.facultyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JoiningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnrtryBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Entrydate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EntryUpdateBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Updatetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panelAddUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loginTabelBindingSource)).BeginInit();
             this.pnlDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
             this.pnlHoldingUserButton.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginTabelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaculty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(100)))));
+            this.panel1.Controls.Add(this.pnlDetails);
+            this.panel1.Controls.Add(this.dataGridViewFaculty);
+            this.panel1.Controls.Add(this.dataGridViewStaff);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panelAddUser);
-            this.panel1.Controls.Add(this.pnlDetails);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridViewStudent);
             this.panel1.Controls.Add(this.pnlHoldingUserButton);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -143,10 +176,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1310, 632);
+            this.panel1.Size = new System.Drawing.Size(1300, 630);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -158,7 +190,7 @@
             this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(265, 207);
+            this.panel8.Location = new System.Drawing.Point(487, 584);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(184, 33);
             this.panel8.TabIndex = 48;
@@ -167,7 +199,7 @@
             // progressBar1
             // 
             this.progressBar1.ForeColor = System.Drawing.Color.Lime;
-            this.progressBar1.Location = new System.Drawing.Point(5, 5);
+            this.progressBar1.Location = new System.Drawing.Point(4, 5);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(176, 23);
             this.progressBar1.TabIndex = 23;
@@ -213,6 +245,7 @@
             this.panelAddUser.AutoScroll = true;
             this.panelAddUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.panelAddUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelAddUser.Controls.Add(this.label3);
             this.panelAddUser.Controls.Add(this.txtEmail);
             this.panelAddUser.Controls.Add(this.txtName);
             this.panelAddUser.Controls.Add(this.btn_PnlAddUser_Cancel);
@@ -222,7 +255,7 @@
             this.panelAddUser.Controls.Add(this.txtEmployeeId);
             this.panelAddUser.Controls.Add(this.label61);
             this.panelAddUser.ForeColor = System.Drawing.Color.Black;
-            this.panelAddUser.Location = new System.Drawing.Point(22, 49);
+            this.panelAddUser.Location = new System.Drawing.Point(20, 49);
             this.panelAddUser.Name = "panelAddUser";
             this.panelAddUser.Size = new System.Drawing.Size(237, 276);
             this.panelAddUser.TabIndex = 46;
@@ -235,12 +268,9 @@
             this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtEmail.Location = new System.Drawing.Point(8, 111);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(211, 23);
             this.txtEmail.TabIndex = 2;
-            // 
-            // loginTabelBindingSource
-            // 
-            this.loginTabelBindingSource.DataSource = typeof(SIM.LoginTabel);
             // 
             // txtName
             // 
@@ -248,6 +278,7 @@
             this.txtName.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtName.Location = new System.Drawing.Point(8, 76);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.ShortcutsEnabled = false;
             this.txtName.Size = new System.Drawing.Size(211, 23);
             this.txtName.TabIndex = 0;
@@ -329,7 +360,10 @@
             this.txtEmployeeId.ShortcutsEnabled = false;
             this.txtEmployeeId.Size = new System.Drawing.Size(211, 23);
             this.txtEmployeeId.TabIndex = 1;
+            this.txtEmployeeId.Text = "Enter Id";
+            this.txtEmployeeId.Click += new System.EventHandler(this.txtEmployeeId_Click_1);
             this.txtEmployeeId.TextChanged += new System.EventHandler(this.txtEmployeeId_TextChanged);
+            this.txtEmployeeId.MouseLeave += new System.EventHandler(this.txtEmployeeId_MouseLeave);
             // 
             // label61
             // 
@@ -349,39 +383,24 @@
             this.pnlDetails.AutoScroll = true;
             this.pnlDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.pnlDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlDetails.Controls.Add(this.linkRecoverPassword);
             this.pnlDetails.Controls.Add(this.label19);
             this.pnlDetails.Controls.Add(this.pnlDetails_RemoveUser);
             this.pnlDetails.Controls.Add(this.label21);
-            this.pnlDetails.Controls.Add(this.label26);
             this.pnlDetails.Controls.Add(this.label151);
             this.pnlDetails.Controls.Add(this.label153);
             this.pnlDetails.Controls.Add(this.pictureBox1);
-            this.pnlDetails.Controls.Add(this.labelMotherName);
             this.pnlDetails.Controls.Add(this.labelFatherName);
             this.pnlDetails.Controls.Add(this.labelDateOfBirth);
             this.pnlDetails.Controls.Add(this.labelCourse);
             this.pnlDetails.Controls.Add(this.panel15);
             this.pnlDetails.Controls.Add(this.btnHide_PnlDetails);
             this.pnlDetails.ForeColor = System.Drawing.Color.Black;
-            this.pnlDetails.Location = new System.Drawing.Point(240, 64);
+            this.pnlDetails.Location = new System.Drawing.Point(281, 146);
             this.pnlDetails.Name = "pnlDetails";
-            this.pnlDetails.Size = new System.Drawing.Size(334, 511);
+            this.pnlDetails.Size = new System.Drawing.Size(337, 420);
             this.pnlDetails.TabIndex = 47;
             this.pnlDetails.TabStop = true;
             this.pnlDetails.Visible = false;
-            // 
-            // linkRecoverPassword
-            // 
-            this.linkRecoverPassword.AutoSize = true;
-            this.linkRecoverPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkRecoverPassword.LinkColor = System.Drawing.Color.Yellow;
-            this.linkRecoverPassword.Location = new System.Drawing.Point(74, 475);
-            this.linkRecoverPassword.Name = "linkRecoverPassword";
-            this.linkRecoverPassword.Size = new System.Drawing.Size(163, 15);
-            this.linkRecoverPassword.TabIndex = 82;
-            this.linkRecoverPassword.TabStop = true;
-            this.linkRecoverPassword.Text = "Click here to reset password ";
             // 
             // label19
             // 
@@ -404,7 +423,7 @@
             this.pnlDetails_RemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pnlDetails_RemoveUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlDetails_RemoveUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlDetails_RemoveUser.Location = new System.Drawing.Point(198, 430);
+            this.pnlDetails_RemoveUser.Location = new System.Drawing.Point(198, 402);
             this.pnlDetails_RemoveUser.Name = "pnlDetails_RemoveUser";
             this.pnlDetails_RemoveUser.Size = new System.Drawing.Size(102, 26);
             this.pnlDetails_RemoveUser.TabIndex = 39;
@@ -423,17 +442,6 @@
             this.label21.TabIndex = 80;
             this.label21.Text = "Gender";
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(18, 393);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(49, 17);
-            this.label26.TabIndex = 78;
-            this.label26.Text = "Phone";
-            // 
             // label151
             // 
             this.label151.AutoSize = true;
@@ -441,9 +449,9 @@
             this.label151.ForeColor = System.Drawing.Color.White;
             this.label151.Location = new System.Drawing.Point(18, 253);
             this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(66, 17);
+            this.label151.Size = new System.Drawing.Size(19, 17);
             this.label151.TabIndex = 76;
-            this.label151.Text = "Enroll No";
+            this.label151.Text = "Id";
             // 
             // label153
             // 
@@ -466,17 +474,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
-            // 
-            // labelMotherName
-            // 
-            this.labelMotherName.AutoSize = true;
-            this.labelMotherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMotherName.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelMotherName.Location = new System.Drawing.Point(156, 396);
-            this.labelMotherName.Name = "labelMotherName";
-            this.labelMotherName.Size = new System.Drawing.Size(14, 17);
-            this.labelMotherName.TabIndex = 74;
-            this.labelMotherName.Text = "-";
             // 
             // labelFatherName
             // 
@@ -516,7 +513,7 @@
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel15.Controls.Add(this.label83);
             this.panel15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel15.Location = new System.Drawing.Point(0, 27);
+            this.panel15.Location = new System.Drawing.Point(5, 27);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(321, 35);
             this.panel15.TabIndex = 8;
@@ -544,24 +541,30 @@
             this.btnHide_PnlDetails.UseVisualStyleBackColor = true;
             this.btnHide_PnlDetails.Click += new System.EventHandler(this.btnHide_PnlDetails_Click);
             // 
-            // dataGridView1
+            // dataGridViewStudent
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(90)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIdDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
+            this.dataGridViewStudent.AllowUserToAddRows = false;
+            this.dataGridViewStudent.AutoGenerateColumns = false;
+            this.dataGridViewStudent.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(90)))));
+            this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.enrollNoDataGridViewTextBoxColumn,
+            this.rollNoDataGridViewTextBoxColumn,
+            this.aadhaarDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
-            this.securityAnswerDataGridViewTextBoxColumn,
-            this.loginTimeDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.loginTabelBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 146);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1010, 429);
-            this.dataGridView1.TabIndex = 47;
+            this.fatherDataGridViewTextBoxColumn,
+            this.entryByDataGridViewTextBoxColumn,
+            this.entryDateTimeDataGridViewTextBoxColumn,
+            this.lastUpdateByDataGridViewTextBoxColumn,
+            this.updateDateTimeDataGridViewTextBoxColumn,
+            this.ageDataGridViewTextBoxColumn});
+            this.dataGridViewStudent.DataSource = this.studentBindingSource;
+            this.dataGridViewStudent.Location = new System.Drawing.Point(252, 146);
+            this.dataGridViewStudent.Name = "dataGridViewStudent";
+            this.dataGridViewStudent.ReadOnly = true;
+            this.dataGridViewStudent.Size = new System.Drawing.Size(1010, 429);
+            this.dataGridViewStudent.TabIndex = 47;
+            this.dataGridViewStudent.Visible = false;
             // 
             // pnlHoldingUserButton
             // 
@@ -601,7 +604,7 @@
             this.pnlHoldingUserButton.Location = new System.Drawing.Point(2, 47);
             this.pnlHoldingUserButton.Name = "pnlHoldingUserButton";
             this.pnlHoldingUserButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pnlHoldingUserButton.Size = new System.Drawing.Size(234, 583);
+            this.pnlHoldingUserButton.Size = new System.Drawing.Size(246, 581);
             this.pnlHoldingUserButton.TabIndex = 45;
             // 
             // btnUser14
@@ -1160,7 +1163,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1306, 45);
+            this.panel6.Size = new System.Drawing.Size(1296, 45);
             this.panel6.TabIndex = 3;
             // 
             // btnStaff
@@ -1183,6 +1186,7 @@
             this.btnStaff.TabIndex = 22;
             this.btnStaff.Text = "      Staff";
             this.btnStaff.UseVisualStyleBackColor = false;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnFaculty
             // 
@@ -1198,12 +1202,13 @@
             this.btnFaculty.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnFaculty.Image = ((System.Drawing.Image)(resources.GetObject("btnFaculty.Image")));
             this.btnFaculty.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFaculty.Location = new System.Drawing.Point(806, 9);
+            this.btnFaculty.Location = new System.Drawing.Point(805, 9);
             this.btnFaculty.Name = "btnFaculty";
             this.btnFaculty.Size = new System.Drawing.Size(104, 32);
             this.btnFaculty.TabIndex = 21;
             this.btnFaculty.Text = "       Faculty";
             this.btnFaculty.UseVisualStyleBackColor = false;
+            this.btnFaculty.Click += new System.EventHandler(this.btnFaculty_Click);
             // 
             // btnAddUser
             // 
@@ -1255,9 +1260,9 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(2, 630);
+            this.panel5.Location = new System.Drawing.Point(2, 628);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1306, 2);
+            this.panel5.Size = new System.Drawing.Size(1296, 2);
             this.panel5.TabIndex = 2;
             // 
             // panel4
@@ -1266,16 +1271,16 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(2, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1306, 2);
+            this.panel4.Size = new System.Drawing.Size(1296, 2);
             this.panel4.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1308, 0);
+            this.panel3.Location = new System.Drawing.Point(1298, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 632);
+            this.panel3.Size = new System.Drawing.Size(2, 630);
             this.panel3.TabIndex = 1;
             // 
             // panel2
@@ -1284,7 +1289,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 632);
+            this.panel2.Size = new System.Drawing.Size(2, 630);
             this.panel2.TabIndex = 0;
             // 
             // panel7
@@ -1296,7 +1301,7 @@
             this.panel7.Controls.Add(this.textBox1);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.label1);
-            this.panel7.Location = new System.Drawing.Point(273, 80);
+            this.panel7.Location = new System.Drawing.Point(258, 80);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1010, 47);
             this.panel7.TabIndex = 49;
@@ -1351,71 +1356,310 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "To";
             // 
-            // userIdDataGridViewTextBoxColumn
+            // loginTabelBindingSource
             // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "userId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "userId";
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.loginTabelBindingSource.DataSource = typeof(SIM.LoginTabel);
             // 
-            // emailDataGridViewTextBoxColumn
+            // label3
             // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(25, 255);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 16);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "If admin, use # before userid";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // studentBindingSource
             // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.studentBindingSource.DataSource = typeof(SIM.Student);
+            // 
+            // enrollNoDataGridViewTextBoxColumn
+            // 
+            this.enrollNoDataGridViewTextBoxColumn.DataPropertyName = "EnrollNo";
+            this.enrollNoDataGridViewTextBoxColumn.HeaderText = "EnrollNo";
+            this.enrollNoDataGridViewTextBoxColumn.Name = "enrollNoDataGridViewTextBoxColumn";
+            this.enrollNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rollNoDataGridViewTextBoxColumn
+            // 
+            this.rollNoDataGridViewTextBoxColumn.DataPropertyName = "RollNo";
+            this.rollNoDataGridViewTextBoxColumn.HeaderText = "RollNo";
+            this.rollNoDataGridViewTextBoxColumn.Name = "rollNoDataGridViewTextBoxColumn";
+            this.rollNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // aadhaarDataGridViewTextBoxColumn
+            // 
+            this.aadhaarDataGridViewTextBoxColumn.DataPropertyName = "Aadhaar";
+            this.aadhaarDataGridViewTextBoxColumn.HeaderText = "Aadhaar";
+            this.aadhaarDataGridViewTextBoxColumn.Name = "aadhaarDataGridViewTextBoxColumn";
+            this.aadhaarDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // securityAnswerDataGridViewTextBoxColumn
+            // fatherDataGridViewTextBoxColumn
             // 
-            this.securityAnswerDataGridViewTextBoxColumn.DataPropertyName = "SecurityAnswer";
-            this.securityAnswerDataGridViewTextBoxColumn.HeaderText = "SecurityAnswer";
-            this.securityAnswerDataGridViewTextBoxColumn.Name = "securityAnswerDataGridViewTextBoxColumn";
+            this.fatherDataGridViewTextBoxColumn.DataPropertyName = "Father";
+            this.fatherDataGridViewTextBoxColumn.HeaderText = "Father";
+            this.fatherDataGridViewTextBoxColumn.Name = "fatherDataGridViewTextBoxColumn";
+            this.fatherDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // loginTimeDataGridViewTextBoxColumn
+            // entryByDataGridViewTextBoxColumn
             // 
-            this.loginTimeDataGridViewTextBoxColumn.DataPropertyName = "LoginTime";
-            this.loginTimeDataGridViewTextBoxColumn.HeaderText = "LoginTime";
-            this.loginTimeDataGridViewTextBoxColumn.Name = "loginTimeDataGridViewTextBoxColumn";
+            this.entryByDataGridViewTextBoxColumn.DataPropertyName = "EntryBy";
+            this.entryByDataGridViewTextBoxColumn.HeaderText = "EntryBy";
+            this.entryByDataGridViewTextBoxColumn.Name = "entryByDataGridViewTextBoxColumn";
+            this.entryByDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // statusDataGridViewTextBoxColumn
+            // entryDateTimeDataGridViewTextBoxColumn
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.entryDateTimeDataGridViewTextBoxColumn.DataPropertyName = "EntryDateTime";
+            this.entryDateTimeDataGridViewTextBoxColumn.HeaderText = "EntryDateTime";
+            this.entryDateTimeDataGridViewTextBoxColumn.Name = "entryDateTimeDataGridViewTextBoxColumn";
+            this.entryDateTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastUpdateByDataGridViewTextBoxColumn
+            // 
+            this.lastUpdateByDataGridViewTextBoxColumn.DataPropertyName = "LastUpdateBy";
+            this.lastUpdateByDataGridViewTextBoxColumn.HeaderText = "LastUpdateBy";
+            this.lastUpdateByDataGridViewTextBoxColumn.Name = "lastUpdateByDataGridViewTextBoxColumn";
+            this.lastUpdateByDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // updateDateTimeDataGridViewTextBoxColumn
+            // 
+            this.updateDateTimeDataGridViewTextBoxColumn.DataPropertyName = "updateDateTime";
+            this.updateDateTimeDataGridViewTextBoxColumn.HeaderText = "updateDateTime";
+            this.updateDateTimeDataGridViewTextBoxColumn.Name = "updateDateTimeDataGridViewTextBoxColumn";
+            this.updateDateTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewStaff
+            // 
+            this.dataGridViewStaff.AllowUserToAddRows = false;
+            this.dataGridViewStaff.AutoGenerateColumns = false;
+            this.dataGridViewStaff.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(90)))));
+            this.dataGridViewStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.dataGridViewStaff.DataSource = this.staffBindingSource;
+            this.dataGridViewStaff.Location = new System.Drawing.Point(263, 141);
+            this.dataGridViewStaff.Name = "dataGridViewStaff";
+            this.dataGridViewStaff.ReadOnly = true;
+            this.dataGridViewStaff.Size = new System.Drawing.Size(1010, 429);
+            this.dataGridViewStaff.TabIndex = 50;
+            this.dataGridViewStaff.Visible = false;
+            // 
+            // dataGridViewFaculty
+            // 
+            this.dataGridViewFaculty.AllowUserToAddRows = false;
+            this.dataGridViewFaculty.AutoGenerateColumns = false;
+            this.dataGridViewFaculty.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(90)))));
+            this.dataGridViewFaculty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFaculty.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.DOB,
+            this.JoiningDate,
+            this.EnrtryBy,
+            this.Entrydate,
+            this.EntryUpdateBy,
+            this.Updatetime});
+            this.dataGridViewFaculty.DataSource = this.facultyBindingSource;
+            this.dataGridViewFaculty.Location = new System.Drawing.Point(273, 146);
+            this.dataGridViewFaculty.Name = "dataGridViewFaculty";
+            this.dataGridViewFaculty.ReadOnly = true;
+            this.dataGridViewFaculty.Size = new System.Drawing.Size(1000, 420);
+            this.dataGridViewFaculty.TabIndex = 51;
+            this.dataGridViewFaculty.Visible = false;
+            // 
+            // facultyBindingSource
+            // 
+            this.facultyBindingSource.DataSource = typeof(SIM.Faculty);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Father";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Father";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // DOB
+            // 
+            this.DOB.DataPropertyName = "DOB";
+            this.DOB.HeaderText = "DOB";
+            this.DOB.Name = "DOB";
+            this.DOB.ReadOnly = true;
+            // 
+            // JoiningDate
+            // 
+            this.JoiningDate.DataPropertyName = "JoiningDate";
+            this.JoiningDate.HeaderText = "JoiningDate";
+            this.JoiningDate.Name = "JoiningDate";
+            this.JoiningDate.ReadOnly = true;
+            // 
+            // EnrtryBy
+            // 
+            this.EnrtryBy.DataPropertyName = "EnrtryBy";
+            this.EnrtryBy.HeaderText = "EnrtryBy";
+            this.EnrtryBy.Name = "EnrtryBy";
+            this.EnrtryBy.ReadOnly = true;
+            // 
+            // Entrydate
+            // 
+            this.Entrydate.DataPropertyName = "Entrydate";
+            this.Entrydate.HeaderText = "Entrydate";
+            this.Entrydate.Name = "Entrydate";
+            this.Entrydate.ReadOnly = true;
+            // 
+            // EntryUpdateBy
+            // 
+            this.EntryUpdateBy.DataPropertyName = "EntryUpdateBy";
+            this.EntryUpdateBy.HeaderText = "EntryUpdateBy";
+            this.EntryUpdateBy.Name = "EntryUpdateBy";
+            this.EntryUpdateBy.ReadOnly = true;
+            // 
+            // Updatetime
+            // 
+            this.Updatetime.DataPropertyName = "Updatetime";
+            this.Updatetime.HeaderText = "Updatetime";
+            this.Updatetime.Name = "Updatetime";
+            this.Updatetime.ReadOnly = true;
+            // 
+            // staffBindingSource
+            // 
+            this.staffBindingSource.DataSource = typeof(SIM.Staff);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Father";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Father";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DOB";
+            this.dataGridViewTextBoxColumn2.HeaderText = "DOB";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "JoiningDate";
+            this.dataGridViewTextBoxColumn3.HeaderText = "JoiningDate";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "EnrtryBy";
+            this.dataGridViewTextBoxColumn6.HeaderText = "EnrtryBy";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Entrydate";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Entrydate";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "EntryUpdateBy";
+            this.dataGridViewTextBoxColumn8.HeaderText = "EntryUpdateBy";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Updatetime";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Updatetime";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // UserControlAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.panel1);
             this.Name = "UserControlAdmin";
-            this.Size = new System.Drawing.Size(1310, 632);
+            this.Size = new System.Drawing.Size(1300, 630);
             this.Load += new System.EventHandler(this.UserControlAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panelAddUser.ResumeLayout(false);
             this.panelAddUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loginTabelBindingSource)).EndInit();
             this.pnlDetails.ResumeLayout(false);
             this.pnlDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).EndInit();
             this.pnlHoldingUserButton.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loginTabelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFaculty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facultyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1470,20 +1714,17 @@
         private System.Windows.Forms.TextBox txtEmployeeId;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TextBox txtRe_Password;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewStudent;
         private System.Windows.Forms.Button pnlDetails_RemoveUser;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Button btnHide_PnlDetails;
         private System.Windows.Forms.Panel pnlDetails;
-        private System.Windows.Forms.LinkLabel linkRecoverPassword;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label151;
         private System.Windows.Forms.Label label153;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelMotherName;
         private System.Windows.Forms.Label labelFatherName;
         private System.Windows.Forms.Label labelDateOfBirth;
         private System.Windows.Forms.Label labelCourse;
@@ -1501,12 +1742,39 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource loginTabelBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enrollNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rollNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aadhaarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn securityAnswerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fatherDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entryByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entryDateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdateByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn updateDateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource studentBindingSource;
+        private System.Windows.Forms.DataGridView dataGridViewFaculty;
+        private System.Windows.Forms.DataGridView dataGridViewStaff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JoiningDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EnrtryBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Entrydate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EntryUpdateBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Updatetime;
+        private System.Windows.Forms.BindingSource facultyBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.BindingSource staffBindingSource;
     }
 }

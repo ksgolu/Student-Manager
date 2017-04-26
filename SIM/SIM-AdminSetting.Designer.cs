@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SIM_AdminSetting));
             this.panelProfile = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panelLoginColour2 = new System.Windows.Forms.Panel();
             this.txtProfilePassword = new System.Windows.Forms.TextBox();
@@ -101,22 +101,10 @@
             this.panelProfile.Controls.Add(this.label4);
             this.panelProfile.Controls.Add(this.btnLogin);
             this.panelProfile.Controls.Add(this.panel4);
-            this.panelProfile.Location = new System.Drawing.Point(12, 31);
+            this.panelProfile.Location = new System.Drawing.Point(12, 32);
             this.panelProfile.Name = "panelProfile";
             this.panelProfile.Size = new System.Drawing.Size(286, 364);
             this.panelProfile.TabIndex = 1;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkRed;
-            this.label17.Location = new System.Drawing.Point(125, 42);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(88, 13);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "Wrong Password";
-            this.label17.Visible = false;
             // 
             // label16
             // 
@@ -165,6 +153,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 56);
             this.panel4.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.DarkRed;
+            this.label17.Location = new System.Drawing.Point(125, 42);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(88, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Wrong Password";
+            this.label17.Visible = false;
             // 
             // label3
             // 
@@ -513,7 +513,7 @@
             // pictureBoxPwdOk
             // 
             this.pictureBoxPwdOk.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPwdOk.Image")));
-            this.pictureBoxPwdOk.Location = new System.Drawing.Point(78, 55);
+            this.pictureBoxPwdOk.Location = new System.Drawing.Point(75, 55);
             this.pictureBoxPwdOk.Name = "pictureBoxPwdOk";
             this.pictureBoxPwdOk.Size = new System.Drawing.Size(31, 27);
             this.pictureBoxPwdOk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

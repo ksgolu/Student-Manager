@@ -63,8 +63,9 @@ namespace SIM
                             break;
                         }
                     }
-                    if (count == 1 && check==0 && available==false)
+                    if (count == 1 && check==0)
                     {
+                        bool ActiveStatus = false; ;
                         conn.Close();
                         pictureBox2.Visible = false;
                         pictureBox1.Visible = true;
@@ -81,36 +82,36 @@ namespace SIM
                         { count1++; }
                         if (count1 == 1)
                         {
-                            MessageBox.Show("Your Account is not active yet!");
+                            ActiveStatus = true;
                         }
-                        else
-                        {
+                        
+                       
 
-                            Form1 form = new Form1(txtUserid.Text);
+                            Form1 form = new Form1(txtUserid.Text,txtPassword.Text, ActiveStatus,available);
                             form.Show();
-                        }
+                       
 
                         //this.Show();
                     }
-                    if (count == 1 && check == 0 && available == true)
-                    {
-                        pictureBox2.Visible = false;
-                        pictureBox1.Visible = true;
-                        this.Hide();
+                    //if (count == 1 && check == 0 && available == true)
+                    //{
+                    //    pictureBox2.Visible = false;
+                    //    pictureBox1.Visible = true;
+                    //    this.Hide();
 
-                        SIM_Admin form = new SIM_Admin();
-                        form.Show();
-                        //this.Show();
+                    //    SIM_Admin form = new SIM_Admin();
+                    //    form.Show();
+                    //    //this.Show();
 
-                    }
+                    //}
                     else if(count == 1 && check == 1)
                     {
                         pictureBox2.Visible = false;
                         pictureBox1.Visible = true;
                         this.Hide();
                         MessageBox.Show("I am in check=1");
-                        Form1  form = new Form1(txtUserid.Text);
-                        form.Show();
+                        //Form1  form = new Form1(txtUserid.Text);
+                       // form.Show();
 
                         this.Hide();
 

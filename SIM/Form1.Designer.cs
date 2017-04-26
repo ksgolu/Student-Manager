@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -201,7 +202,6 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelStatus = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.txtCounterUpdate = new System.Windows.Forms.TextBox();
             this.txtCoumterDelete = new System.Windows.Forms.TextBox();
             this.labelAdd = new System.Windows.Forms.Label();
@@ -271,7 +271,6 @@
             this.label199 = new System.Windows.Forms.Label();
             this.label200 = new System.Windows.Forms.Label();
             this.label201 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddStudentExtand = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label162 = new System.Windows.Forms.Label();
@@ -287,6 +286,20 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PicBoxProfile = new System.Windows.Forms.PictureBox();
             this.btnProfile = new System.Windows.Forms.Button();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.enrollNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.branchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bloodGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Aadhaar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userControlAdmin1 = new SIM.UserControlAdmin();
             this.menuStrip1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelSelection.SuspendLayout();
@@ -306,11 +319,12 @@
             this.panelAddStudentExtended.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -542,7 +556,7 @@
             this.panelSelection.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSelection.Location = new System.Drawing.Point(0, 31);
             this.panelSelection.Name = "panelSelection";
-            this.panelSelection.Size = new System.Drawing.Size(35, 702);
+            this.panelSelection.Size = new System.Drawing.Size(35, 680);
             this.panelSelection.TabIndex = 30;
             // 
             // label173
@@ -582,7 +596,7 @@
             this.btnAmin.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnAmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAmin.Image")));
             this.btnAmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAmin.Location = new System.Drawing.Point(2, 630);
+            this.btnAmin.Location = new System.Drawing.Point(-3, 630);
             this.btnAmin.Name = "btnAmin";
             this.btnAmin.Size = new System.Drawing.Size(115, 48);
             this.btnAmin.TabIndex = 33;
@@ -672,7 +686,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-1, 8);
+            this.button1.Location = new System.Drawing.Point(0, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 35);
             this.button1.TabIndex = 30;
@@ -776,9 +790,9 @@
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
             this.toolStripStatusLabel4});
-            this.statusStrip1.Location = new System.Drawing.Point(35, 711);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 711);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1319, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1354, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 33;
             this.statusStrip1.Text = "statusStrip1";
@@ -810,7 +824,7 @@
             this.toolStripStatusLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStripStatusLabel4.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(1023, 17);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(1058, 17);
             this.toolStripStatusLabel4.Spring = true;
             this.toolStripStatusLabel4.Text = "Developed by kumar satyam";
             this.toolStripStatusLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1038,6 +1052,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Email", true));
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(119, 330);
             this.textBox9.Name = "textBox9";
@@ -1057,6 +1072,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "StudentMob1", true));
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(120, 290);
             this.textBox7.Name = "textBox7";
@@ -1076,6 +1092,7 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "ParentsMob", true));
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(120, 450);
             this.txtPhone.Name = "txtPhone";
@@ -1095,6 +1112,7 @@
             // 
             // comboReligions
             // 
+            this.comboReligions.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Religion", true));
             this.comboReligions.FormattingEnabled = true;
             this.comboReligions.Location = new System.Drawing.Point(119, 535);
             this.comboReligions.Name = "comboReligions";
@@ -1115,6 +1133,7 @@
             // 
             // comboBox4
             // 
+            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "BloodGroup", true));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "O",
@@ -1144,6 +1163,7 @@
             // 
             // comboNationality
             // 
+            this.comboNationality.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Nationality", true));
             this.comboNationality.FormattingEnabled = true;
             this.comboNationality.Items.AddRange(new object[] {
             "Indian",
@@ -1206,6 +1226,7 @@
             // txtAdmNo
             // 
             this.txtAdmNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAdmNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "RollNo", true));
             this.txtAdmNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdmNo.Location = new System.Drawing.Point(119, 77);
             this.txtAdmNo.Name = "txtAdmNo";
@@ -1240,6 +1261,7 @@
             // 
             // pBoxStudPic
             // 
+            this.pBoxStudPic.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.studentBindingSource, "Photo", true));
             this.pBoxStudPic.Location = new System.Drawing.Point(110, 25);
             this.pBoxStudPic.Name = "pBoxStudPic";
             this.pBoxStudPic.Size = new System.Drawing.Size(166, 148);
@@ -1345,6 +1367,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "DOB", true));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(223, 249);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -1368,6 +1391,7 @@
             // textBox8
             // 
             this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Branch", true));
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(118, 620);
             this.textBox8.Name = "textBox8";
@@ -1377,6 +1401,7 @@
             // textBox1
             // 
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Course", true));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(119, 580);
             this.textBox1.Name = "textBox1";
@@ -1407,6 +1432,7 @@
             // 
             // txtDOB
             // 
+            this.txtDOB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "DOB", true));
             this.txtDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDOB.Location = new System.Drawing.Point(120, 250);
             this.txtDOB.Name = "txtDOB";
@@ -1489,6 +1515,7 @@
             // txtEnrollNo
             // 
             this.txtEnrollNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEnrollNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "EnrollNo", true));
             this.txtEnrollNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEnrollNo.Location = new System.Drawing.Point(120, 35);
             this.txtEnrollNo.Name = "txtEnrollNo";
@@ -1520,6 +1547,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "ResiAdd", true));
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(120, 754);
             this.txtAddress.Multiline = true;
@@ -1542,6 +1570,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "PrmnentAdd", true));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(120, 671);
             this.txtEmail.Multiline = true;
@@ -1552,6 +1581,7 @@
             // 
             // txtMother
             // 
+            this.txtMother.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Mother", true));
             this.txtMother.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMother.Location = new System.Drawing.Point(120, 410);
             this.txtMother.Name = "txtMother";
@@ -1560,6 +1590,7 @@
             // 
             // txtFather
             // 
+            this.txtFather.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Father", true));
             this.txtFather.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFather.Location = new System.Drawing.Point(120, 370);
             this.txtFather.Name = "txtFather";
@@ -1576,6 +1607,7 @@
             "kumari"});
             this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Name", true));
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(119, 119);
             this.txtName.Name = "txtName";
@@ -1960,6 +1992,7 @@
             // label170
             // 
             this.label170.AutoSize = true;
+            this.label170.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "ResiAdd", true));
             this.label170.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label170.ForeColor = System.Drawing.SystemColors.Window;
             this.label170.Location = new System.Drawing.Point(153, 950);
@@ -1971,6 +2004,7 @@
             // label171
             // 
             this.label171.AutoSize = true;
+            this.label171.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "PrmnentAdd", true));
             this.label171.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label171.ForeColor = System.Drawing.SystemColors.Window;
             this.label171.Location = new System.Drawing.Point(149, 880);
@@ -2195,6 +2229,7 @@
             // label169
             // 
             this.label169.AutoSize = true;
+            this.label169.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Branch", true));
             this.label169.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label169.ForeColor = System.Drawing.SystemColors.Window;
             this.label169.Location = new System.Drawing.Point(149, 829);
@@ -2206,6 +2241,7 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
+            this.labelAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Father", true));
             this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddress.ForeColor = System.Drawing.SystemColors.Window;
             this.labelAddress.Location = new System.Drawing.Point(149, 587);
@@ -2218,6 +2254,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.studentBindingSource, "Photo", true));
             this.pictureBox1.Location = new System.Drawing.Point(97, 86);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(148, 124);
@@ -2228,6 +2265,7 @@
             // label168
             // 
             this.label168.AutoSize = true;
+            this.label168.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Course", true));
             this.label168.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label168.ForeColor = System.Drawing.SystemColors.Window;
             this.label168.Location = new System.Drawing.Point(149, 791);
@@ -2239,6 +2277,7 @@
             // labelPhone
             // 
             this.labelPhone.AutoSize = true;
+            this.labelPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Email", true));
             this.labelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPhone.ForeColor = System.Drawing.SystemColors.Window;
             this.labelPhone.Location = new System.Drawing.Point(149, 543);
@@ -2250,6 +2289,7 @@
             // label167
             // 
             this.label167.AutoSize = true;
+            this.label167.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Religion", true));
             this.label167.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label167.ForeColor = System.Drawing.SystemColors.Window;
             this.label167.Location = new System.Drawing.Point(149, 752);
@@ -2261,6 +2301,7 @@
             // label166
             // 
             this.label166.AutoSize = true;
+            this.label166.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Nationality", true));
             this.label166.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label166.ForeColor = System.Drawing.SystemColors.Window;
             this.label166.Location = new System.Drawing.Point(149, 706);
@@ -2272,6 +2313,7 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
+            this.labelEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "StudentMob1", true));
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmail.ForeColor = System.Drawing.SystemColors.Window;
             this.labelEmail.Location = new System.Drawing.Point(149, 504);
@@ -2283,6 +2325,7 @@
             // label165
             // 
             this.label165.AutoSize = true;
+            this.label165.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "ParentsMob", true));
             this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label165.ForeColor = System.Drawing.SystemColors.Window;
             this.label165.Location = new System.Drawing.Point(149, 669);
@@ -2294,6 +2337,7 @@
             // labelMotherName
             // 
             this.labelMotherName.AutoSize = true;
+            this.labelMotherName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "DOB", true));
             this.labelMotherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMotherName.ForeColor = System.Drawing.SystemColors.Window;
             this.labelMotherName.Location = new System.Drawing.Point(149, 458);
@@ -2305,6 +2349,7 @@
             // label164
             // 
             this.label164.AutoSize = true;
+            this.label164.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Mother", true));
             this.label164.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label164.ForeColor = System.Drawing.SystemColors.Window;
             this.label164.Location = new System.Drawing.Point(149, 629);
@@ -2316,6 +2361,7 @@
             // labelFatherName
             // 
             this.labelFatherName.AutoSize = true;
+            this.labelFatherName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "BloodGroup", true));
             this.labelFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFatherName.ForeColor = System.Drawing.SystemColors.Window;
             this.labelFatherName.Location = new System.Drawing.Point(149, 421);
@@ -2338,6 +2384,7 @@
             // labelCourse
             // 
             this.labelCourse.AutoSize = true;
+            this.labelCourse.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Name", true));
             this.labelCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCourse.ForeColor = System.Drawing.SystemColors.Window;
             this.labelCourse.Location = new System.Drawing.Point(149, 332);
@@ -2349,6 +2396,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
+            this.labelName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "RollNo", true));
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.SystemColors.Window;
             this.labelName.Location = new System.Drawing.Point(149, 289);
@@ -2360,6 +2408,7 @@
             // labelRoll
             // 
             this.labelRoll.AutoSize = true;
+            this.labelRoll.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "EnrollNo", true));
             this.labelRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRoll.ForeColor = System.Drawing.SystemColors.Window;
             this.labelRoll.Location = new System.Drawing.Point(149, 250);
@@ -2464,7 +2513,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(323, 106);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(648, 58);
+            this.panel2.Size = new System.Drawing.Size(644, 58);
             this.panel2.TabIndex = 8;
             // 
             // pictureBox3
@@ -2523,7 +2572,6 @@
             // panelStatus
             // 
             this.panelStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.panelStatus.Controls.Add(this.splitter1);
             this.panelStatus.Controls.Add(this.txtCounterUpdate);
             this.panelStatus.Controls.Add(this.txtCoumterDelete);
             this.panelStatus.Controls.Add(this.labelAdd);
@@ -2532,28 +2580,20 @@
             this.panelStatus.Controls.Add(this.btnStatus);
             this.panelStatus.Controls.Add(this.txtCounterAdd);
             this.panelStatus.Enabled = false;
-            this.panelStatus.Location = new System.Drawing.Point(321, 165);
+            this.panelStatus.Location = new System.Drawing.Point(323, 165);
             this.panelStatus.Name = "panelStatus";
-            this.panelStatus.Size = new System.Drawing.Size(646, 33);
+            this.panelStatus.Size = new System.Drawing.Size(644, 33);
             this.panelStatus.TabIndex = 15;
             this.panelStatus.Visible = false;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 33);
-            this.splitter1.TabIndex = 20;
-            this.splitter1.TabStop = false;
             // 
             // txtCounterUpdate
             // 
             this.txtCounterUpdate.AccessibleDescription = "";
             this.txtCounterUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.txtCounterUpdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCounterUpdate.Location = new System.Drawing.Point(225, 10);
+            this.txtCounterUpdate.Location = new System.Drawing.Point(206, 9);
             this.txtCounterUpdate.Name = "txtCounterUpdate";
-            this.txtCounterUpdate.Size = new System.Drawing.Size(28, 19);
+            this.txtCounterUpdate.Size = new System.Drawing.Size(47, 19);
             this.txtCounterUpdate.TabIndex = 19;
             // 
             // txtCoumterDelete
@@ -2561,9 +2601,9 @@
             this.txtCoumterDelete.AccessibleDescription = "";
             this.txtCoumterDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.txtCoumterDelete.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCoumterDelete.Location = new System.Drawing.Point(428, 10);
+            this.txtCoumterDelete.Location = new System.Drawing.Point(408, 9);
             this.txtCoumterDelete.Name = "txtCoumterDelete";
-            this.txtCoumterDelete.Size = new System.Drawing.Size(28, 19);
+            this.txtCoumterDelete.Size = new System.Drawing.Size(46, 19);
             this.txtCoumterDelete.TabIndex = 18;
             // 
             // labelAdd
@@ -2571,7 +2611,7 @@
             this.labelAdd.AutoSize = true;
             this.labelAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAdd.ForeColor = System.Drawing.Color.LimeGreen;
-            this.labelAdd.Location = new System.Drawing.Point(46, 10);
+            this.labelAdd.Location = new System.Drawing.Point(66, 9);
             this.labelAdd.Name = "labelAdd";
             this.labelAdd.Size = new System.Drawing.Size(122, 20);
             this.labelAdd.TabIndex = 12;
@@ -2584,7 +2624,7 @@
             this.labelDel.AutoSize = true;
             this.labelDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDel.ForeColor = System.Drawing.Color.Red;
-            this.labelDel.Location = new System.Drawing.Point(456, 10);
+            this.labelDel.Location = new System.Drawing.Point(454, 9);
             this.labelDel.Name = "labelDel";
             this.labelDel.Size = new System.Drawing.Size(132, 20);
             this.labelDel.TabIndex = 13;
@@ -2596,7 +2636,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Yellow;
-            this.labelUpdate.Location = new System.Drawing.Point(249, 10);
+            this.labelUpdate.Location = new System.Drawing.Point(252, 9);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(138, 20);
             this.labelUpdate.TabIndex = 14;
@@ -2611,9 +2651,9 @@
             this.btnStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatus.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStatus.Location = new System.Drawing.Point(612, 6);
+            this.btnStatus.Location = new System.Drawing.Point(607, 2);
             this.btnStatus.Name = "btnStatus";
-            this.btnStatus.Size = new System.Drawing.Size(38, 27);
+            this.btnStatus.Size = new System.Drawing.Size(35, 29);
             this.btnStatus.TabIndex = 16;
             this.btnStatus.Text = "ok";
             this.btnStatus.UseVisualStyleBackColor = false;
@@ -2624,9 +2664,9 @@
             this.txtCounterAdd.AccessibleDescription = "";
             this.txtCounterAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
             this.txtCounterAdd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCounterAdd.Location = new System.Drawing.Point(20, 8);
+            this.txtCounterAdd.Location = new System.Drawing.Point(20, 7);
             this.txtCounterAdd.Name = "txtCounterAdd";
-            this.txtCounterAdd.Size = new System.Drawing.Size(28, 19);
+            this.txtCounterAdd.Size = new System.Drawing.Size(45, 19);
             this.txtCounterAdd.TabIndex = 17;
             this.txtCounterAdd.TextChanged += new System.EventHandler(this.txtCounter_TextChanged);
             // 
@@ -2698,9 +2738,9 @@
             this.panelStudent.Controls.Add(this.label160);
             this.panelStudent.Controls.Add(this.label163);
             this.panelStudent.Controls.Add(this.label161);
-            this.panelStudent.Location = new System.Drawing.Point(41, 80);
+            this.panelStudent.Location = new System.Drawing.Point(1141, 661);
             this.panelStudent.Name = "panelStudent";
-            this.panelStudent.Size = new System.Drawing.Size(1300, 630);
+            this.panelStudent.Size = new System.Drawing.Size(200, 49);
             this.panelStudent.TabIndex = 24;
             this.panelStudent.Visible = false;
             this.panelStudent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
@@ -2765,9 +2805,9 @@
             this.panelAddStudentExtended.Controls.Add(this.label200);
             this.panelAddStudentExtended.Controls.Add(this.label201);
             this.panelAddStudentExtended.ForeColor = System.Drawing.Color.Black;
-            this.panelAddStudentExtended.Location = new System.Drawing.Point(11, 150);
+            this.panelAddStudentExtended.Location = new System.Drawing.Point(3, 146);
             this.panelAddStudentExtended.Name = "panelAddStudentExtended";
-            this.panelAddStudentExtended.Size = new System.Drawing.Size(644, 284);
+            this.panelAddStudentExtended.Size = new System.Drawing.Size(630, 375);
             this.panelAddStudentExtended.TabIndex = 44;
             this.panelAddStudentExtended.TabStop = true;
             this.panelAddStudentExtended.Visible = false;
@@ -2775,6 +2815,7 @@
             // txt_ext_Roll
             // 
             this.txt_ext_Roll.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_ext_Roll.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "RollNo", true));
             this.txt_ext_Roll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_Roll.Location = new System.Drawing.Point(411, 36);
             this.txt_ext_Roll.Name = "txt_ext_Roll";
@@ -2861,6 +2902,7 @@
             // txt_extEmail
             // 
             this.txt_extEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txt_extEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Email", true));
             this.txt_extEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_extEmail.Location = new System.Drawing.Point(378, 203);
             this.txt_extEmail.Name = "txt_extEmail";
@@ -2881,6 +2923,7 @@
             // 
             // txt_ext_studentMob
             // 
+            this.txt_ext_studentMob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "StudentMob1", true));
             this.txt_ext_studentMob.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_studentMob.Location = new System.Drawing.Point(120, 202);
             this.txt_ext_studentMob.Name = "txt_ext_studentMob";
@@ -2900,6 +2943,7 @@
             // 
             // txt_ext_parentMob1
             // 
+            this.txt_ext_parentMob1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "ParentsMob", true));
             this.txt_ext_parentMob1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_parentMob1.Location = new System.Drawing.Point(120, 310);
             this.txt_ext_parentMob1.Name = "txt_ext_parentMob1";
@@ -2919,6 +2963,7 @@
             // 
             // cmBx_ext_Batch
             // 
+            this.cmBx_ext_Batch.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Branch", true));
             this.cmBx_ext_Batch.FormattingEnabled = true;
             this.cmBx_ext_Batch.Location = new System.Drawing.Point(436, 415);
             this.cmBx_ext_Batch.Name = "cmBx_ext_Batch";
@@ -2928,6 +2973,7 @@
             // 
             // cmBx_ext_Religion
             // 
+            this.cmBx_ext_Religion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Religion", true));
             this.cmBx_ext_Religion.FormattingEnabled = true;
             this.cmBx_ext_Religion.Location = new System.Drawing.Point(436, 370);
             this.cmBx_ext_Religion.Name = "cmBx_ext_Religion";
@@ -2948,6 +2994,7 @@
             // 
             // cmBx_ext_Bloodgrp
             // 
+            this.cmBx_ext_Bloodgrp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "BloodGroup", true));
             this.cmBx_ext_Bloodgrp.FormattingEnabled = true;
             this.cmBx_ext_Bloodgrp.Items.AddRange(new object[] {
             "O",
@@ -2977,6 +3024,7 @@
             // 
             // cmBx_ext_Course
             // 
+            this.cmBx_ext_Course.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Course", true));
             this.cmBx_ext_Course.FormattingEnabled = true;
             this.cmBx_ext_Course.Items.AddRange(new object[] {
             "BBA",
@@ -2996,6 +3044,7 @@
             // 
             // CmBx_ext_Nationality
             // 
+            this.CmBx_ext_Nationality.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Nationality", true));
             this.CmBx_ext_Nationality.FormattingEnabled = true;
             this.CmBx_ext_Nationality.Items.AddRange(new object[] {
             "Indian",
@@ -3082,6 +3131,7 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.studentBindingSource, "Photo", true));
             this.pictureBox9.Location = new System.Drawing.Point(110, 25);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(166, 148);
@@ -3219,6 +3269,7 @@
             // 
             // txt_ext_DOB
             // 
+            this.txt_ext_DOB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "DOB", true));
             this.txt_ext_DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_DOB.Location = new System.Drawing.Point(433, 90);
             this.txt_ext_DOB.Name = "txt_ext_DOB";
@@ -3294,6 +3345,7 @@
             // txt_ext_EnrollNo
             // 
             this.txt_ext_EnrollNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_ext_EnrollNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "EnrollNo", true));
             this.txt_ext_EnrollNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_EnrollNo.Location = new System.Drawing.Point(120, 35);
             this.txt_ext_EnrollNo.Name = "txt_ext_EnrollNo";
@@ -3325,6 +3377,7 @@
             // 
             // txt_ext_Raddress
             // 
+            this.txt_ext_Raddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "ResiAdd", true));
             this.txt_ext_Raddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_Raddress.Location = new System.Drawing.Point(436, 480);
             this.txt_ext_Raddress.Multiline = true;
@@ -3347,6 +3400,7 @@
             // 
             // txt_ext_Paddress
             // 
+            this.txt_ext_Paddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "PrmnentAdd", true));
             this.txt_ext_Paddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_Paddress.Location = new System.Drawing.Point(120, 477);
             this.txt_ext_Paddress.Multiline = true;
@@ -3357,6 +3411,7 @@
             // 
             // txt_ext_Mother
             // 
+            this.txt_ext_Mother.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Mother", true));
             this.txt_ext_Mother.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_Mother.Location = new System.Drawing.Point(436, 257);
             this.txt_ext_Mother.Name = "txt_ext_Mother";
@@ -3365,6 +3420,7 @@
             // 
             // txt_ext_Father
             // 
+            this.txt_ext_Father.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Father", true));
             this.txt_ext_Father.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_Father.Location = new System.Drawing.Point(120, 256);
             this.txt_ext_Father.Name = "txt_ext_Father";
@@ -3381,6 +3437,7 @@
             "kumari"});
             this.txt_ext_Name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txt_ext_Name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
+            this.txt_ext_Name.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Name", true));
             this.txt_ext_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ext_Name.Location = new System.Drawing.Point(120, 89);
             this.txt_ext_Name.Name = "txt_ext_Name";
@@ -3471,14 +3528,6 @@
             this.label201.TabIndex = 26;
             this.label201.Text = "*";
             this.label201.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(323, 200);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 380);
-            this.dataGridView1.TabIndex = 55;
             // 
             // btnAddStudentExtand
             // 
@@ -3660,6 +3709,120 @@
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(SIM.Student);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.enrollNoDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn9,
+            this.branchDataGridViewTextBoxColumn,
+            this.semDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn10,
+            this.ageDataGridViewTextBoxColumn,
+            this.bloodGroupDataGridViewTextBoxColumn,
+            this.Aadhaar});
+            this.dataGridView1.DataSource = this.studentBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(323, 204);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(644, 377);
+            this.dataGridView1.TabIndex = 55;
+            // 
+            // enrollNoDataGridViewTextBoxColumn
+            // 
+            this.enrollNoDataGridViewTextBoxColumn.DataPropertyName = "EnrollNo";
+            this.enrollNoDataGridViewTextBoxColumn.HeaderText = "EnrollNo";
+            this.enrollNoDataGridViewTextBoxColumn.Name = "enrollNoDataGridViewTextBoxColumn";
+            this.enrollNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "RollNo";
+            this.dataGridViewTextBoxColumn5.HeaderText = "RollNo";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Father";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Father";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Course";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Course";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // branchDataGridViewTextBoxColumn
+            // 
+            this.branchDataGridViewTextBoxColumn.DataPropertyName = "Branch";
+            this.branchDataGridViewTextBoxColumn.HeaderText = "Branch";
+            this.branchDataGridViewTextBoxColumn.Name = "branchDataGridViewTextBoxColumn";
+            this.branchDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // semDataGridViewTextBoxColumn
+            // 
+            this.semDataGridViewTextBoxColumn.DataPropertyName = "Sem";
+            this.semDataGridViewTextBoxColumn.HeaderText = "Sem";
+            this.semDataGridViewTextBoxColumn.Name = "semDataGridViewTextBoxColumn";
+            this.semDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "DOB";
+            this.dataGridViewTextBoxColumn10.HeaderText = "DOB";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bloodGroupDataGridViewTextBoxColumn
+            // 
+            this.bloodGroupDataGridViewTextBoxColumn.DataPropertyName = "BloodGroup";
+            this.bloodGroupDataGridViewTextBoxColumn.HeaderText = "BloodGroup";
+            this.bloodGroupDataGridViewTextBoxColumn.Name = "bloodGroupDataGridViewTextBoxColumn";
+            this.bloodGroupDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Aadhaar
+            // 
+            this.Aadhaar.DataPropertyName = "Aadhaar";
+            this.Aadhaar.HeaderText = "Aadhaar";
+            this.Aadhaar.Name = "Aadhaar";
+            this.Aadhaar.ReadOnly = true;
+            // 
+            // userControlAdmin1
+            // 
+            this.userControlAdmin1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.userControlAdmin1.Location = new System.Drawing.Point(42, 73);
+            this.userControlAdmin1.Name = "userControlAdmin1";
+            this.userControlAdmin1.Size = new System.Drawing.Size(1300, 630);
+            this.userControlAdmin1.TabIndex = 37;
+            this.userControlAdmin1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -3668,16 +3831,17 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1354, 733);
-            this.Controls.Add(this.PicBoxProfile);
+            this.Controls.Add(this.panelSelection);
             this.Controls.Add(this.listBoxProfile);
+            this.Controls.Add(this.panelStudent);
+            this.Controls.Add(this.userControlAdmin1);
+            this.Controls.Add(this.PicBoxProfile);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.panelSelection);
             this.Controls.Add(this.labelSelect);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.labelProfile);
             this.Controls.Add(this.btnProfile);
-            this.Controls.Add(this.panelStudent);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -3721,11 +3885,12 @@
             this.panelAddStudentExtended.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3855,7 +4020,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panelStatus;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TextBox txtCounterUpdate;
         private System.Windows.Forms.TextBox txtCoumterDelete;
         private System.Windows.Forms.Label labelAdd;
@@ -4005,7 +4169,20 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAmin;
+        private System.Windows.Forms.BindingSource studentBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enrollNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn branchDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bloodGroupDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Aadhaar;
+        private UserControlAdmin userControlAdmin1;
     }
 }
 

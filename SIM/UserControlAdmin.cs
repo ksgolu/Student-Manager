@@ -298,6 +298,8 @@ namespace SIM
                     conn.Open();
                     dr = cmd.ExecuteReader();
 
+
+
                     while (dr.Read())
                     {
                         
@@ -796,6 +798,7 @@ namespace SIM
 
         public void SearchTabel(string UserId)
         {
+           // MessageBox.Show("Test");
             string source = "data source = KUMARSATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
             //String query= "select * from  where UserId='" + txtUserid.Text + "' and Password='" + txtPassword.Text + "'"
 
@@ -825,10 +828,22 @@ namespace SIM
             }
         }
 
+        public Color buttonColor()
+        {
+            btnStudent.BackColor = Color.Transparent;
+            btnFaculty.BackColor = Color.Transparent;
+            btnStaff.BackColor = Color.Transparent;
+            return Color.LimeGreen;
+        }
+
         private void btnStudent_Click(object sender, EventArgs e)
         {
+            btnStudent.BackColor = buttonColor();
+            dataGridViewStudent.Visible = true;
+            dataGridViewStaff.Visible = false;
+            dataGridViewFaculty.Visible = false;
 
-            string source = "data source = KUMARSATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
+           /* string source = "data source = KUMARSATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
             //String query= "select * from  where UserId='" + txtUserid.Text + "' and Password='" + txtPassword.Text + "'"
 
             try
@@ -842,7 +857,7 @@ namespace SIM
                     sda.Fill(dtabel);
                     BindingSource bSource = new BindingSource();
                     bSource.DataSource = dtabel;
-                    dataGridView1.DataSource = bSource;
+                    dataGridViewStudent.DataSource = bSource;
                     sda.Update(dtabel);
                 }
 
@@ -850,8 +865,41 @@ namespace SIM
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+          
+            }*/
         }
+
+
+        private void btnFaculty_Click(object sender, EventArgs e)
+        {
+            btnFaculty.BackColor = buttonColor();
+            dataGridViewStudent.Visible = false;
+            dataGridViewStaff.Visible = false;
+            dataGridViewFaculty.Visible = true;
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            btnStaff.BackColor = buttonColor();
+            dataGridViewStudent.Visible = false;
+            dataGridViewStaff.Visible = true;
+            dataGridViewFaculty.Visible = false;
+        }
+
+
+
+        private void txtEmployeeId_Click_1(object sender, EventArgs e)
+        {
+            if (txtEmployeeId.Text == "Enter Id")
+                txtEmployeeId.Text = null;
+        }
+
+        private void txtEmployeeId_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtEmployeeId.Text))
+                txtEmployeeId.Text = "Enter Id";
+        }
+
     }
 }
  

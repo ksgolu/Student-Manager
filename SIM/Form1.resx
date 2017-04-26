@@ -151,24 +151,20 @@
   </data>
   <data name="btnAmin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADkElEQVRIS+1VXWwMURQef0WkKv6S+uel
-        /iOaSNt0e2emu3gTYkNCkLY7M3fWhkYi8WITvHjwQsODIHggHkTUbzXpQyORUFo2aNG5M7u16B+hiXiw
-        vrN7SXWrVDz6kps799x7zvnOPefcUf7jn4FFU6N9u0W+xp0NquWe1yyvUeXuI9V276rcO6dzN+gPuzPo
-        nFQZHkojr6eplghjxDRLdGNu1iy3Ht83Me7AGdaiFwSeqKZjs13OJKn6Z9Ds9rlgfkzl4j2z3GuaLULM
-        TqxYXe1NDuxpnlBUGZush8VKlTs2ztTBea9mOYcpKmliaDCjYyocHIVyH67joI8nZgeDqVFy+yfQNTEz
-        OU+zvSOI6iM5+m1EUShpXEQ00+kBywOGkRojt5TycGKKZrUXsJ0dC4mxzuPL/carObS3NnJjLDMFOerV
-        zbg5ZI7WhEQ+ongGRtcogow0NULjbqFqe2cxx7H/BkTqML5o3DuTOaMoxRXtcyG7hf0WH+xIcTbKubsJ
-        h7pwVZXB4KX0FRVTfri4DANxnYv9iHIfnD1EIXzt74RFG0aj6kzsdeumt16Ks4GKOYkkNpWFvGVSpKhm
-        +zpiT5XGtjvjgtFYThl3NJz91N8JgVW1roD+I+ydkqJsIA/3Yez22kjbRClSwMwg1qzi5VIpUhhrQO5Q
-        UQOcIEd5pI/c3JOibOBaYqrp1i4OxnKkSGHcsWAwxQxnoRSlkS7bAU4KUSjomVpE/lSKskEMiMmqSNff
-        RjIHNhqxVy9F2UAU5ygnzEr+MPg9J1TaRdXeeIqShVw/5QTOrwb2JKdTkaRfCBQGRrduiSqpng3VFlvA
-        olM33R3omZEkS3c/VZflJpGzg6op9sJ4Cxh3w9FbvGcnsA6DxAXM77C+iAL5dUP6+IvZUG7DuIIynJmR
-        yj7hiJILGBU9cFgP2Ta8WzUgkFAt7zPmZjiJlvLWBaST0R0EhvFgDPqgmu5bt71o/45nxvOpfu4s0qrc
-        JbrZOpOeGr/Rk6dZiQLqft9OMT+wtXmCPD40iq3kdDTdcTDrw5t0iKL73pgDQVfKIvFZFOmQ7AdDAKyg
-        WIPwP9ArDIeVZaGXy0oqnuVSQ9Kdl2NNclwjSla0BEBOqv85SiNt05jpVsNAK/LQhQpryrxN4jpGXWbt
-        duLnFQMRXlLRmStVhwdqrhJ6cU2xEaxPwehDOHyMmfrptG55m+nP+dd/xv/IhqJ8A81CDZLOhA6GAAAA
-        AElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACsUlEQVRIS+2VSahOYRjHDytCUaYrFuaF
+        klgomSKSHSmUFLFDho0FFjfDxrCwUVYyFQtTKCyQMm3YGDNFIvNQpLyv3/95n/N1Ou7n3vPd7kb3X7/e
+        7zznef7veccv61R9hV5ZFsfRTvOW5w5V7EknS+EWvPd2CfTwhI5QGA234REchsdwE4hXVuwCAynWKLbA
+        Mhic4kXFCcQ/wkmYCqfgA4z3BJfqVB+Wg/zkO6DkF/sQ3Awv4Du8hK3Q3xNcYSRcg1dwydurMMITXOog
+        bAP5yE++m1I/NYVRkE/VWrgCT9LIiordiC/2dzG1YWGKF2Uz8oz2Mu060NrLn35qCmNA03YOpsBx+AST
+        PMFl0zYLXnuntGF2iheluvgZjvFby3AetAz0U1MY5Ak/4Rv8gjMw3BNcsS+x3SCD+6AP3ZXiRanOBiAf
+        +cn3KDR5gmQj0BQfASX+Bm2SibzzqVNOnExMozsL87zVqInno7UloC6cBvnITzuddS/PiCnMhHvwA/R1
+        T2EF9KOgN+0+eAtreO6aWnsmbu/JCytBdaqXj/xmeActyW4Y7UolngCdxy+wExbAG7gIviFsdvSsuN4r
+        7yuoTvVaAvzkW1dhCByABzAXtFNlqq9+Du9gPSb5VGpZNoBuJ71X3gVQnerlIz9860rXWdgBGt38ZGrb
+        fy88hIMw1JNdeg6H/L3yuChs6qk3n+3wr2vSvnwVaIpWQ/cUt7WaA2z58mawGh05vSdPUp3Vywe/cs1f
+        srXRRtDRcJOqso/cA7o88GtVdjncADZCHObBilKd3c/X+c1xalV2v+qM3YGxHqwo1YW77lO6l1uU/pTD
+        fgiQn7WqqE71+Og/uE3Setjdqn8HnbWqUGf1+LRZeadxugcqSnUNdxqaYVEDUNf4SNtJtU65+OPG9iOf
+        Tv3/yrI/5xtL/wS//PsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnEmail.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -298,6 +294,12 @@
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>587, 6</value>
   </metadata>
+  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 45</value>
+  </metadata>
+  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 45</value>
+  </metadata>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAyVJREFUeF7t
@@ -330,6 +332,9 @@
         /2KafgB0TNur4rB/TwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="Aadhaar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnAddStudentExtand.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAbBJREFUeF7t
@@ -7196,6 +7201,6 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>90</value>
+    <value>25</value>
   </metadata>
 </root>

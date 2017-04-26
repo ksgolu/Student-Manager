@@ -47,6 +47,15 @@
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="SplashScreen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SplashScreen.Winforms.1.0.0\lib\SplashScreen.dll</HintPath>
       <Private>True</Private>
@@ -81,6 +90,24 @@
     <Compile Include="Email.Designer.cs">
       <DependentUpon>Email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Faculty.cs">
+      <DependentUpon>FacultyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultyModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultyModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +119,12 @@
     </Compile>
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserVerification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserVerification.Designer.cs">
+      <DependentUpon>FormUserVerification.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Helper.cs" />
@@ -132,6 +165,42 @@
     </Compile>
     <Compile Include="SIM-AdminSetting.Designer.cs">
       <DependentUpon>SIM-AdminSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <DependentUpon>StaffModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaffModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaffModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaffModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>StudentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="superClass.cs" />
     <Compile Include="Test.cs">
@@ -185,6 +254,9 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUserVerification.resx">
+      <DependentUpon>FormUserVerification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,11 +299,21 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LoginModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="FacultyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FacultyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FacultyModel.edmx.diagram">
+      <DependentUpon>FacultyModel.edmx</DependentUpon>
+    </None>
     <None Include="LoginModel.edmx.diagram">
       <DependentUpon>LoginModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Faculty.datasource" />
     <None Include="Properties\DataSources\LoginTabel.datasource" />
+    <None Include="Properties\DataSources\Staff.datasource" />
+    <None Include="Properties\DataSources\Student.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -241,6 +323,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="StudentModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StudentModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="StaffModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StaffModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="StaffModel.edmx.diagram">
+      <DependentUpon>StaffModel.edmx</DependentUpon>
+    </None>
+    <None Include="StudentModel.edmx.diagram">
+      <DependentUpon>StudentModel.edmx</DependentUpon>
+    </None>
     <None Include="whatsAppDataSet.xsc">
       <DependentUpon>whatsAppDataSet.xsd</DependentUpon>
     </None>
@@ -272,6 +368,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="FacultyModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FacultyModel.edmx</DependentUpon>
+      <LastGenOutput>FacultyModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="FacultyModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FacultyModel.edmx</DependentUpon>
+      <LastGenOutput>FacultyModel.cs</LastGenOutput>
+    </Content>
     <Content Include="LoginModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LoginModel.edmx</DependentUpon>
@@ -281,6 +387,26 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LoginModel.edmx</DependentUpon>
       <LastGenOutput>LoginModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="StaffModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StaffModel.edmx</DependentUpon>
+      <LastGenOutput>StaffModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="StaffModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StaffModel.edmx</DependentUpon>
+      <LastGenOutput>StaffModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="StudentModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StudentModel.edmx</DependentUpon>
+      <LastGenOutput>StudentModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="StudentModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StudentModel.edmx</DependentUpon>
+      <LastGenOutput>StudentModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
