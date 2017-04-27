@@ -390,5 +390,15 @@ namespace SIM.Properties {
                 this["btn14"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"metadata=res://*/FacultyModel.csdl|res://*/FacultyModel.ssdl|res://*/FacultyModel.msl;provider=System.Data.SqlClient;provider connection string=""data source=KUMARSATYAM\SQLEXPRESS;initial catalog=geu;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework""")]
+        public string FacultyEntities {
+            get {
+                return ((string)(this["FacultyEntities"]));
+            }
+        }
     }
 }

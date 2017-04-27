@@ -8,6 +8,7 @@ using System.Threading;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
 //using Sim;
 //using System.Windows.Forms;
 
@@ -30,13 +31,15 @@ namespace SIM
 
     public partial class Form1 : Form
     {
+        UserControlFaculty ucf = new UserControlFaculty(); 
         //string source = "data source = SATYAM\\SQLEXPRESS;database = geu;integrated security = SSPI";
-        int delete = 0, update = 0, added = 0, check = 0; //this golbel variable is counter for update,delete and add button. and these are reset to ( 0 ) when ok button of panelStatus is pressed
+        int delete = 0, update = 0, added = 0, check = 0, delete2 = 0, update2 = 0, added2 = 0, check2 = 0, delete3 = 0, update3 = 0, added3 = 0, check3 = 0; //this golbel variable is counter for update,delete and add button. and these are reset to ( 0 ) when ok button of panelStatus is pressed
 
         bool ActiveStatus,Admin;
         string userId, Password;
-        //geuStudentEntities studentEntities;
         StudentEntities studentEntities;
+        FacultyEntities facultyEntities;
+        StaffEntities staffEntities;
         public Form1(string userid,string Password ,bool ActiveStatus,bool Admin)
         {
             this.ActiveStatus = ActiveStatus;
@@ -364,12 +367,12 @@ namespace SIM
          */
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtEnrollNo.Text == "" || txtName.Text == "" || txtFather.Text == "" || txtMother.Text == "" || txtDOB.Text == "")
+           /* if (txtEnrollNo.Text == "" || txtName.Text == "" || txtFather.Text == "" || txtMother.Text == "" || txtDOB.Text == "")
             {
                 MessageBox.Show("Fields marked with ( * ) are compulsary", "Field Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            else
-            {
+            }*/
+           // else
+            //{
                 try
                 {
                     studentBindingSource.EndEdit();                   
@@ -400,7 +403,7 @@ namespace SIM
                     MessageBox.Show(ex.Message, "Could not inserted into batabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
                    /* geuStudentBindingSource.ResetBindings(false);*/
                 }
-            }
+           // }
         }
 
 
@@ -413,23 +416,17 @@ namespace SIM
             string Tenroll = txtEnrollNo.Text;
             try
             {
-                int check = 0;
+                //int check = 0;
                studentBindingSource.EndEdit();
-                studentEntities.SaveChangesAsync();
+                studentEntities.SaveChanges();
                 panelStatus.Enabled = true;
                 panelStatus.Visible = true;
                 labelUpdate.Visible = true;
               
-               if(Tenroll==txtEnrollNo.Text)
-                {
-                    check++;
-                }
-                if (check == 1)
-                {
-                    update++;
-                    txtCounterUpdate.Text = update.ToString();
-                }
-       
+              
+                update++;
+                txtCounterUpdate.Text = update.ToString();
+
 
             }
             catch (Exception ex)
@@ -593,7 +590,7 @@ namespace SIM
                         studentEntities.Students.Remove(studentBindingSource.Current as Student);
                          studentBindingSource.RemoveCurrent();
                          studentBindingSource.EndEdit();
-                         studentEntities.SaveChanges();
+                         studentEntities.SaveChangesAsync();
                         panelStatus.Enabled = true;
                         panelStatus.Visible = true;
                         labelDel.Visible = true;
@@ -615,42 +612,6 @@ namespace SIM
             }
 
 
-        }
-
-        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (dataGridView1.Enabled == true)
-            {
-                if (e.KeyCode == Keys.Delete)
-                {
-                    if (MessageBox.Show("Are you sure to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                         try
-                         {
-                             studentEntities.Students.Remove(studentBindingSource.Current as Student);
-                             studentBindingSource.RemoveCurrent();
-                             studentBindingSource.EndEdit();
-                             studentEntities.SaveChanges();
-
-
-                             panelStatus.Enabled = true;
-                             panelStatus.Visible = true;
-                             delete++;
-                             txtCoumterDelete.Text = delete.ToString();
-                             labelDel.Visible = true;
-                         }
-                         catch (Exception ex)
-                         {
-                             MessageBox.Show(ex.Message, "Could not inserted into batabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                             studentBindingSource.ResetBindings(false);
-                         }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("First Active the database\nBy pressing:-\n    1.Refresh button\n    2.Cancel button in Add student form  ", "Database Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
 
@@ -695,6 +656,7 @@ namespace SIM
                 studentBindingSource.DataSource = studentEntities.Students.ToList();
                 panelStudentAdd.Visible = false;
                 dataGridView1.Enabled = true;
+                dataGridView1.Refresh();
                 labelDBstatus.Text = "Database is currently active";
                 panelStudent.Visible = true;
 
@@ -892,6 +854,15 @@ namespace SIM
 
         }
 
+        private void btnAmin_Click(object sender, EventArgs e)
+        {
+            userControlAdmin1.Visible = true;
+            panelStudent.Visible = false;
+
+
+
+        }
+
         private void btnAddStudentExtand_Click(object sender, EventArgs e)
         {
             panelStudentAdd.Visible = false;
@@ -936,14 +907,114 @@ namespace SIM
                 grpBxAdvSearch.Visible = false;
         }
 
-        private void btnAmin_Click(object sender, EventArgs e)
+        private void btn_ext_Add_Click(object sender, EventArgs e)
         {
-            userControlAdmin1.Visible = true;
-            panelStudent.Visible = false;
-            
+            if (txtEnrollNo.Text == "" || txtName.Text == "" || txtFather.Text == "" || txtMother.Text == "" || txtDOB.Text == "")
+            {
+                MessageBox.Show("Fields marked with ( * ) are compulsary", "Field Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                try
+                {
+                    studentBindingSource.EndEdit();
+                    studentEntities.SaveChangesAsync();
+                    added++;
+                    txtCounterAdd.Text = added.ToString();
+                    ///panelStatus.Enabled = true;
+                    panelStatus.Enabled = true;
+                    panelStatus.Visible = true;
+                    labelAdd.Visible = true;
+                    btnUpdate.Enabled = false;
+                    btnUpdate.Visible = false;
+                    //dataGridView1.Enabled = true;
 
 
+                    txtEnrollNo.Focus();
+                    Student g = new Student();
+                    studentEntities.Students.Add(g);
+                    studentBindingSource.Add(g);
+                    studentBindingSource.MoveLast();
+
+
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Could not inserted into batabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    /* geuStudentBindingSource.ResetBindings(false);*/
+                }
+            }
         }
+
+        private void btn_ext_update_Click(object sender, EventArgs e)
+        {
+            string Tenroll = txtEnrollNo.Text;
+            try
+            {
+                int check = 0;
+                studentBindingSource.EndEdit();
+                studentEntities.SaveChangesAsync();
+                panelStatus.Enabled = true;
+                panelStatus.Visible = true;
+                labelUpdate.Visible = true;
+
+                if (Tenroll == txtEnrollNo.Text)
+                {
+                    check++;
+                }
+                if (check == 1)
+                {
+                    update++;
+                    txtCounterUpdate.Text = update.ToString();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Update error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                studentBindingSource.ResetBindings(false);
+            }
+        }
+
+        private void btn_ext_Cancel_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.ResetBindings(false);
+            foreach (DbEntityEntry entry in studentEntities.ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        {
+                            entry.State = EntityState.Detached;
+                            break;
+                        }
+                    case EntityState.Modified:
+                        {
+                            entry.State = EntityState.Unchanged;
+                            break;
+                        }
+                    case EntityState.Deleted:
+                        {
+                            entry.Reload();
+                            break;
+                        }
+                }
+
+            }
+            panelStudentAdd.Enabled = false;
+            panelStudentAdd.Visible = false;
+            dataGridView1.Enabled = true;
+            labelDBstatus.Text = "Database is currently active";
+            //dataGridView1.;
+        }
+
+
+       
+
+       
 
         private void panelStaff_Paint(object sender, PaintEventArgs e)
         {
@@ -954,10 +1025,16 @@ namespace SIM
         {
 
         }
+
+       
+
         private void pBoxStudPic_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -968,31 +1045,382 @@ namespace SIM
         private void btnFaculty_Click(object sender, EventArgs e)
         {
             btnFaculty.BackColor = MenuButtonColor(btnFaculty);
-            //panelSearch.Visible = false;
-            /*panelStudent.Visible = false;
-            panelStaff.Visible = false;
             labelSelect.Visible = false;
-           
-            label92.Text = "FACULTY";
+            panelStudent.Visible = false;
+            //panelStaff.Visible = false;
+            
+
+
+
             try
             {
                 panelFaculty.Visible = true;
-               
-                 /*facultyEntities = new geuEntitiesFaculty();
-                 gfacultyBindingSource1.DataSource = facultyEntities.gfaculties.ToList();*/
-             /*    dataGridViewFaculty.Enabled = true;
-                 labelDBstatus.Text = "Database is currently active";
-
-                
+                facultyEntities = new FacultyEntities();
+                facultyBindingSource.DataSource = facultyEntities.Faculties.ToList();
+                dataGridView2.Enabled = true;
+                labelDBstatus2.Text = "Database is currently active";
             }
+
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        private void btn_F_filter_Click(object sender, EventArgs e)
+        {
+            panelAddFaculty.Visible = false;
+            panelAddFaculty.Enabled = false;
+            dataGridView2.Enabled = true;
+            btn_F_AddExtand.Visible = false;
+            labelDBstatus2.Text = "Database is currently active";
+
+        }
+        private void btn_F_New_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //using (SqlConnection conn = new SqlConnection(source))
+                //{
+                //conn.Open();
+                panelAddFaculty.Visible = true;
+                panelAddFaculty.Enabled = true;
+                dataGridView2.Enabled = false;
+                labelDBstatus2.Text = "Database is currently inactive";
+                btn_F_Add.Enabled = true;
+                btn_F_Add.Visible = true;
+                btn_F_AddExtand.Visible = true;
+                txtId.Focus();
+
+                Faculty f = new Faculty();
+                facultyEntities.Faculties.Add(f);
+                facultyBindingSource.Add(f);
+                facultyBindingSource.MoveLast();
+                labelDOB.Visible = true;
+
+                /* these setting are used because after pressing edit button (situated at the bottom of the dataGridView1) all below text box become disabled.
+                 and hence new entry will not take value in these text boxes, so to make it usable again we need to enable these boxes again.*/
+               /* txtId.Enabled = true;
+                txt_F_Name.Enabled = true;
+                txt_F_Father.Enabled = true;
+                txtMother.Enabled = true;
+                txt_F_DOB.Enabled = true;
+                btn_F_Add.Visible = true;
+                btn_F_Update.Visible = false;
+                 }*/
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+       
+        private void btn_F_AddStudentExtand_Click(object sender, EventArgs e)
+        {
+            panelAddFaculty.Visible = false;
+            panelAddFacultyExt.Visible = true;
+            /*for (int i = 306; i <=640; i+=25)
+            {
+                panelAddStudentExtended.Width = i;
             }*/
+            btn_F_filter.Enabled = false;
+            btn_F_New.Enabled = false;
+            btn_F_AddExtand.Visible = false;
+        }
+        private void btn_F_AddStudentShort_Click(object sender, EventArgs e)
+        {
+            panelAddFacultyExt.Visible = false;
+            panelAddFaculty.Visible = true;
+            btn_F_filter.Enabled = true;
+            btn_F_New.Enabled = true;
+            btn_F_AddExtand.Visible = true;
+
+        }
+
+
+
+
+        public void AddFaculty()
+        {
+
+           /* if (txtId.Text == "" || txt_F_Name.Text == "" || txt_F_Father.Text == "" || txt_F_Mother.Text == "" || txt_F_DOB.Text == "")
+            {
+                MessageBox.Show("Fields marked with ( * ) are compulsary", "Field Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }*/
+           // else
+            //{
+                try
+                {
+                    facultyBindingSource.EndEdit();
+                    facultyEntities.SaveChangesAsync();
+                    
+                    
+                    ///panelStatus.Enabled = true;
+                    panelStatus2.Enabled = true;
+                    panelStatus2.Visible = true;
+                    labelRecordAdd2.Visible = true;
+                    btn_F_Update.Enabled = false;
+                    btn_F_Update.Visible = false;
+                    //dataGridView1.Enabled = true;
+
+
+                    txtId.Focus();
+                    Faculty g = new Faculty();
+                    facultyEntities.Faculties.Add(g);
+                    facultyBindingSource.Add(g);
+                    facultyBindingSource.MoveLast();
+                    added2++;
+                    txt_F_CounterAdd.Text = added2.ToString();
+
+
+
+            }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Could not inserted into batabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    facultyBindingSource.ResetBindings(false);
+                }
+           // }
+
+        }
+
+       public void CancelFaculty()
+        {
+            facultyBindingSource.ResetBindings(false);
+            foreach (DbEntityEntry entry in facultyEntities.ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        {
+                            entry.State = EntityState.Detached;
+                            break;
+                        }
+                    case EntityState.Modified:
+                        {
+                            entry.State = EntityState.Unchanged;
+                            break;
+                        }
+                    case EntityState.Deleted:
+                        {
+                            entry.Reload();
+                            break;
+                        }
+                }
+
+            }
+            panelAddFaculty.Enabled = false;
+            panelAddFaculty.Visible = false;
+            dataGridView2.Enabled = true;
+            labelDBstatus2.Text = "Database is currently active";
+        }
+        public void UpdateFaculty()
+        {
+            //string Tenroll = txtId.Text;
+            try
+            {
+               // int check = 0;
+                facultyBindingSource.EndEdit();
+                facultyEntities.SaveChanges();
+                panelStatus2.Enabled = true;
+                panelStatus2.Visible = true;
+                labelRecordUpdate2.Visible = true;
+
+                update2++;
+                txt_F_CounterUpdate.Text = update2.ToString();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Update error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                facultyBindingSource.ResetBindings(false);
+            }
+
+        }
+
+        private void btn_F_Add_Click(object sender, EventArgs e)
+        {
+            AddFaculty();
+            
+        }
+
+
+        private void btn_F_Update_Click(object sender, EventArgs e)
+        {
+            UpdateFaculty();
+
+        }
+
+        private void btn_F_Cancel_Click(object sender, EventArgs e)
+        {
+            CancelFaculty();
+        }
+
+       
+
+        private void cBx_ext_F_checkAddress_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ext_F_LoadImage_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog fldg = new OpenFileDialog();
+            fldg.Filter = "JPG(*.jpg)|*.jpg|PNg(*.png)|*.png|All Files(*.*)|*.*";
+            if (fldg.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = fldg.FileName.ToString();
+                pictureBox2.ImageLocation = imagePath;
+            }
+
+        }
+
+        private void btn_F_LoadPic_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog fldg = new OpenFileDialog();
+            fldg.Filter = "JPG(*.jpg)|*.jpg|PNg(*.png)|*.png|All Files(*.*)|*.*";
+            if (fldg.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = fldg.FileName.ToString();
+                picBx2.ImageLocation = imagePath;
+            }
+
+        }
+
+        private void btn_ext_F_add_Click(object sender, EventArgs e)
+        {
+            AddFaculty();
+        }
+
+        private void btn_ext_F_cancel_Click(object sender, EventArgs e)
+        {
+            CancelFaculty();
+        }
+
+        private void btn_exe_F_update_Click(object sender, EventArgs e)
+        {
+            UpdateFaculty();
+        }
+
+        private void btn_F_Refresh_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                btn_F_AddExtand.Visible = false;
+                panelFaculty.Visible = false;
+                panelFaculty.Visible = true;
+                //Students = new StudentEntities();
+                facultyBindingSource.DataSource = facultyEntities.Faculties.ToList();
+                panelAddFaculty.Visible = false;
+                dataGridView2.Enabled = true;
+                dataGridView2.Refresh();
+                labelDBstatus2.Text = "Database is currently active";
+                //panelStudent.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "mesage");
+            }
+        }
+
+        private void btn_F_Edit_Click(object sender, EventArgs e)
+        {
+            if (dataGridView2.Enabled == true)
+            {
+                try
+                {
+                    panelAddFaculty.Enabled = true;
+                    panelAddFaculty.Visible = true;
+                    /*txtId.Enabled = false;
+                    txt_F_Name.Enabled = false;
+                    txt_F_Father.Enabled = false;
+                    txtMother.Enabled = false;
+                    txt_F_DOB.Enabled = false;*/
+                    btn_F_Update.Enabled = true;
+                    btn_F_Update.Visible = true;
+                    btn_F_Add.Enabled = false;
+                    btn_F_Add.Visible = false;
+                    facultyEntities.Faculties.Find(facultyBindingSource.Current as Faculty);
+                    txtId.Focus();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Update error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("First Active the database\nBy pressing:-\n    1.Refresh button\n    2.Cancel button in Add student form  ", "Database Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btn_F_Delete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Enabled == true)
+            {
+                if (MessageBox.Show("Are you sure to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        facultyEntities.Faculties.Remove(facultyBindingSource.Current as Faculty);
+                        facultyBindingSource.RemoveCurrent();
+                        facultyBindingSource.EndEdit();
+                        facultyEntities.SaveChangesAsync();
+                        panelStatus2.Enabled = true;
+                        panelStatus2.Visible = true;
+                        labelRecordDelete2.Visible = true;
+                        //labelDelete.Visible = true;
+
+                        delete2++;
+                        txt_F_CoumterDelete.Text = delete2.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Could not inserted into batabase", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        facultyBindingSource.ResetBindings(false);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("First Active the database\nBy pressing:-\n    1.Refresh button\n    2.Cancel button in Add student form  ", "Database Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txt_F_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_F_Status_Click(object sender, EventArgs e)
+        {
+            update2 = 0;
+            added2 = 0;
+            delete2 = 0;
+            panelStatus2.Enabled = false;
+            panelStatus2.Visible = false;
         }
 
         //======================================================---------------- END OF FACULTY PANEL-------------------==========================================================================================
 
+
+
+
+
+
+        //======================================================---------------- STAFF PANEL-------------------==========================================================================================
 
     }//closing of form
 
