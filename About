@@ -1,0 +1,17 @@
+StudentManager is a collage management system which keep record of Students, staffs and faculties in a collage. It have features like 
+Email, WhatsApp, gets all related information on these app using Id, 
+For example:-
+When you use Email app, the contact can be search from id and associated name and Email will automatically filled in the address box.
+It is designed to handle two type of user:
+1: Admin
+2: Client
+
+Admin_____
+Admin have all the power to control over the information. He can add a new client for this system at the time of adding new client in 
+this system an email will be sent to that client cotaining their userid and password. Admin can also see which client add, delete and update 
+data at what time and date
+
+Role of Admin:-
+1: Add/remove client to this software
+2: Manage information
+3: Able to see what changes are done on data and by whom
